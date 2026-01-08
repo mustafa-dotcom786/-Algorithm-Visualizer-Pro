@@ -53,7 +53,6 @@ $user_email = $_SESSION['user_email'];
             --gradient-purple: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
             --gradient-pink: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
             --gradient-cyan: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
-            --gradient-queue: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
         }
 
         * {
@@ -68,8 +67,6 @@ $user_email = $_SESSION['user_email'];
             min-height: 100vh;
             color: var(--text);
             overflow-x: hidden;
-            display: flex;
-            flex-direction: column;
         }
 
         ::selection {
@@ -227,6 +224,15 @@ $user_email = $_SESSION['user_email'];
             animation: subtleFloat 3s ease-in-out infinite;
         }
 
+        .user-avatar img{
+            border: 5px solid;
+    border-radius: 70px;
+    width: 68px;
+    borde-radius: 44px;
+    width: 82px;
+    height: 70px;
+        }
+
         @keyframes subtleFloat {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-5px); }
@@ -293,7 +299,6 @@ $user_email = $_SESSION['user_email'];
             padding: 2rem;
             position: relative;
             z-index: 1;
-            flex: 1;
         }
 
         /* Hero Section */
@@ -485,7 +490,6 @@ $user_email = $_SESSION['user_email'];
         .algorithm-card:nth-child(4) { animation-delay: 0.4s; }
         .algorithm-card:nth-child(5) { animation-delay: 0.5s; }
         .algorithm-card:nth-child(6) { animation-delay: 0.6s; }
-        .algorithm-card:nth-child(7) { animation-delay: 0.7s; }
 
         .algorithm-card::before {
             content: '';
@@ -539,7 +543,6 @@ $user_email = $_SESSION['user_email'];
         .linear-search { background: var(--gradient-info); }
         .binary-search { background: var(--gradient-purple); }
         .linked-list { background: var(--gradient-pink); }
-        .queue { background: var(--gradient-queue); }
 
         .card-title {
             flex: 1;
@@ -757,11 +760,6 @@ $user_email = $_SESSION['user_email'];
 
         .doc-section.active {
             display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
         }
 
         /* Enhanced Code Display */
@@ -1231,11 +1229,6 @@ $user_email = $_SESSION['user_email'];
             color: white;
         }
 
-        .btn-queue {
-            background: var(--gradient-queue);
-            color: white;
-        }
-
         .control-btn:hover {
             transform: translateY(-3px) scale(1.05);
             box-shadow: var(--shadow-lg);
@@ -1444,28 +1437,28 @@ $user_email = $_SESSION['user_email'];
             transform: scale(1.15);
         }
 
-        /* SMALLER Linked List Visualization */
+        /* Linked List Visualization */
         .linked-list-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 2rem;
             align-items: center;
-            padding: 1rem;
+            padding: 2rem;
             overflow-x: auto;
-            min-height: 150px;
+            min-height: 200px;
             position: relative;
         }
 
         .head-pointer {
             position: absolute;
-            top: -30px;
-            left: 30px;
+            top: -40px;
+            left: 50px;
             background: var(--gradient-primary);
             color: white;
-            padding: 6px 12px;
+            padding: 8px 16px;
             border-radius: 20px;
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             box-shadow: var(--shadow-sm);
             z-index: 100;
             animation: slideInDown 0.5s ease;
@@ -1473,13 +1466,13 @@ $user_email = $_SESSION['user_email'];
 
         .traversing-pointer {
             position: absolute;
-            top: -30px;
+            top: -40px;
             background: var(--gradient-warning);
             color: white;
-            padding: 6px 12px;
+            padding: 8px 16px;
             border-radius: 20px;
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             box-shadow: var(--shadow-sm);
             z-index: 100;
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1496,16 +1489,15 @@ $user_email = $_SESSION['user_email'];
             }
         }
 
-        /* SMALLER Linked List Nodes */
         .linked-list-node {
-            min-width: 120px;
+            min-width: 180px;
             background: var(--glass-bg);
             border: 2px solid var(--gradient-pink);
-            border-radius: var(--radius-sm);
-            padding: 0.8rem;
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
             position: relative;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: var(--shadow-sm);
+            box-shadow: var(--shadow-md);
             animation: nodeAppear 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -1524,57 +1516,59 @@ $user_email = $_SESSION['user_email'];
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 0.5rem;
-            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
             border-bottom: 1px solid var(--border);
         }
 
         .node-data {
-            font-size: 1.2rem;
-            font-weight: 700;
+            font-size: 1.8rem;
+            font-weight: 800;
             color: var(--pink);
             text-shadow: 0 2px 4px rgba(236, 72, 153, 0.2);
         }
 
         .node-index {
-            font-size: 0.7rem;
+            font-size: 0.9rem;
             color: var(--text-light);
             font-weight: 600;
             background: var(--background);
-            padding: 2px 8px;
-            border-radius: 12px;
+            padding: 4px 12px;
+            border-radius: 20px;
         }
 
         .node-pointers {
             display: flex;
-            flex-direction: column;
-            gap: 4px;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
         }
 
         .pointer {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            font-size: 0.75rem;
+            gap: 4px;
         }
 
         .pointer-label {
+            font-size: 0.8rem;
             color: var(--text-light);
             font-weight: 500;
         }
 
         .pointer-address {
+            font-size: 0.85rem;
             color: var(--info);
             font-family: 'JetBrains Mono', monospace;
             background: var(--background);
-            padding: 2px 6px;
-            border-radius: 4px;
+            padding: 4px 8px;
+            border-radius: 6px;
             border: 1px solid var(--border);
-            font-size: 0.7rem;
         }
 
         .linked-list-arrow {
-            font-size: 1.2rem;
+            font-size: 2rem;
             color: var(--primary);
             animation: arrowPulse 2s infinite;
             position: relative;
@@ -1582,7 +1576,7 @@ $user_email = $_SESSION['user_email'];
 
         @keyframes arrowPulse {
             0%, 100% { transform: translateX(0); opacity: 1; }
-            50% { transform: translateX(3px); opacity: 0.7; }
+            50% { transform: translateX(5px); opacity: 0.7; }
         }
 
         .linked-list-arrow.traversing {
@@ -1597,7 +1591,7 @@ $user_email = $_SESSION['user_email'];
 
         .linked-list-node.traversing {
             animation: traverseNode 1s infinite;
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
             z-index: 10;
             border-color: var(--warning);
         }
@@ -1610,7 +1604,7 @@ $user_email = $_SESSION['user_email'];
         .linked-list-node.inserting {
             animation: nodeInsert 1.2s cubic-bezier(0.4, 0, 0.2, 1);
             border-color: var(--success);
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+            box-shadow: 0 0 30px rgba(16, 185, 129, 0.4);
         }
 
         @keyframes nodeInsert {
@@ -1631,7 +1625,7 @@ $user_email = $_SESSION['user_email'];
         .linked-list-node.deleting {
             animation: nodeDelete 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
             border-color: var(--danger);
-            box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+            box-shadow: 0 0 30px rgba(239, 68, 68, 0.4);
         }
 
         @keyframes nodeDelete {
@@ -1651,7 +1645,7 @@ $user_email = $_SESSION['user_email'];
 
         .linked-list-node.highlight {
             border-color: var(--info);
-            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
             animation: highlightNode 1s ease-in-out infinite alternate;
         }
 
@@ -1664,12 +1658,12 @@ $user_email = $_SESSION['user_email'];
             position: fixed;
             background: var(--gradient-success);
             color: white;
-            padding: 0.8rem;
-            border-radius: var(--radius-sm);
-            font-size: 1rem;
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            font-size: 1.2rem;
             font-weight: 600;
             z-index: 1000;
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-xl);
             animation: floatNode 2s ease-in-out;
         }
 
@@ -1680,174 +1674,12 @@ $user_email = $_SESSION['user_email'];
             }
             50% {
                 opacity: 1;
-                transform: translate(80px, -40px) scale(1.1);
+                transform: translate(100px, -50px) scale(1.2);
             }
             100% {
                 opacity: 0;
-                transform: translate(160px, 0) scale(0);
+                transform: translate(200px, 0) scale(0);
             }
-        }
-
-        /* Queue Visualization */
-        .queue-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-            padding: 2rem;
-        }
-
-        .queue-visualization {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            position: relative;
-            min-height: 200px;
-        }
-
-        .queue-element {
-            min-width: 80px;
-            min-height: 80px;
-            background: var(--gradient-queue);
-            border-radius: var(--radius-md);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: var(--shadow-md);
-            animation: queueAppear 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        @keyframes queueAppear {
-            from {
-                opacity: 0;
-                transform: translateY(20px) scale(0.8);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        .queue-value {
-            color: white;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 4px;
-        }
-
-        .queue-position {
-            position: absolute;
-            bottom: -25px;
-            left: 0;
-            right: 0;
-            text-align: center;
-            color: var(--text-light);
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .front-pointer, .rear-pointer {
-            position: absolute;
-            background: var(--gradient-warning);
-            color: white;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.8rem;
-            box-shadow: var(--shadow-sm);
-            z-index: 100;
-            animation: slideInDown 0.5s ease;
-        }
-
-        .front-pointer {
-            top: -40px;
-        }
-
-        .rear-pointer {
-            bottom: -40px;
-        }
-
-        .queue-element.enqueuing {
-            animation: enqueueEffect 1s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid var(--success);
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
-        }
-
-        @keyframes enqueueEffect {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px) scale(0.8);
-            }
-            50% {
-                opacity: 1;
-                transform: translateY(0) scale(1.1);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-
-        .queue-element.dequeuing {
-            animation: dequeueEffect 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-            border: 2px solid var(--danger);
-            box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
-        }
-
-        @keyframes dequeueEffect {
-            0% {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-            50% {
-                opacity: 0.5;
-                transform: translateY(-20px) scale(1.1);
-            }
-            100% {
-                opacity: 0;
-                transform: translateY(-40px) scale(0.8);
-            }
-        }
-
-        .queue-status {
-            text-align: center;
-            padding: 1rem;
-            background: var(--glass-bg);
-            border-radius: var(--radius-md);
-            border: 1px solid var(--glass-border);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .queue-info {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .info-item {
-            text-align: center;
-            padding: 1rem;
-            min-width: 120px;
-        }
-
-        .info-value {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .front-value { color: var(--success); }
-        .rear-value { color: var(--warning); }
-        .size-value { color: var(--info); }
-
-        .info-label {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            font-weight: 500;
         }
 
         /* Path animation for traversal */
@@ -1966,154 +1798,6 @@ $user_email = $_SESSION['user_email'];
             font-size: 0.9rem;
             color: var(--text-light);
             font-weight: 500;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border-top: 1px solid var(--glass-border);
-            padding: 3rem 2rem 2rem;
-            margin-top: auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-        }
-
-        .footer-section {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            margin-bottom: 1rem;
-        }
-
-        .footer-logo-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--gradient-primary);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: white;
-        }
-
-        .footer-logo-text h3 {
-            font-size: 1.2rem;
-            font-weight: 700;
-            background: linear-gradient(45deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            line-height: 1.2;
-        }
-
-        .footer-description {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .footer-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 1rem;
-        }
-
-        .footer-links {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-        }
-
-        .footer-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: all 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary);
-            transform: translateX(5px);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-icon {
-            width: 36px;
-            height: 36px;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text);
-            transition: all 0.3s;
-            text-decoration: none;
-        }
-
-        .social-icon:hover {
-            background: var(--primary);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .footer-bottom {
-            max-width: 1400px;
-            margin: 2rem auto 0;
-            padding-top: 2rem;
-            border-top: 1px solid var(--glass-border);
-            text-align: center;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        .copyright {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-bottom-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-bottom-links a {
-            color: var(--text-light);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-bottom-links a:hover {
-            color: var(--primary);
         }
 
         /* Scroll to Top */
@@ -2335,15 +2019,6 @@ $user_email = $_SESSION['user_email'];
             .controls-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .social-links {
-                justify-content: center;
-            }
         }
 
         @media (max-width: 480px) {
@@ -2366,13 +2041,8 @@ $user_email = $_SESSION['user_email'];
             }
             
             .linked-list-node {
-                min-width: 100px;
-                padding: 0.6rem;
-            }
-            
-            .queue-element {
-                min-width: 60px;
-                min-height: 60px;
+                min-width: 140px;
+                padding: 1rem;
             }
         }
     </style>
@@ -2398,7 +2068,7 @@ $user_email = $_SESSION['user_email'];
         </a>
         <div class="user-info">
             <div class="user-avatar">
-                <?php echo strtoupper(substr($user_name, 0, 1)); ?>
+                <img src="avatar.png" alt="">
             </div>
             <div class="user-details">
                 <div class="user-name"><?php echo htmlspecialchars($user_name); ?></div>
@@ -2418,11 +2088,11 @@ $user_email = $_SESSION['user_email'];
             <p class="hero-subtitle">Master complex algorithms through beautiful, interactive visualizations with real-time animations and detailed C++ implementations</p>
             <div class="hero-stats">
                 <div class="stat-item">
-                    <div class="stat-value">7</div>
+                    <div class="stat-value">6</div>
                     <div class="stat-label">Algorithms</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-value">4</div>
+                    <div class="stat-value">3</div>
                     <div class="stat-label">Categories</div>
                 </div>
                 <div class="stat-item">
@@ -2445,9 +2115,6 @@ $user_email = $_SESSION['user_email'];
             </button>
             <button class="category-btn" onclick="filterAlgorithms('linkedlist')">
                 <i class="fas fa-link"></i> Linked List
-            </button>
-            <button class="category-btn" onclick="filterAlgorithms('queue')">
-                <i class="fas fa-stream"></i> Queue
             </button>
         </div>
 
@@ -2614,33 +2281,6 @@ $user_email = $_SESSION['user_email'];
                     </button>
                 </div>
             </div>
-
-            <!-- Queue -->
-            <div class="algorithm-card" data-category="queue" onclick="showDocumentation('queue')">
-                <div class="card-header">
-                    <div class="card-icon queue">
-                        <i class="fas fa-stream"></i>
-                    </div>
-                    <div class="card-title">
-                        <h3>Queue</h3>
-                        <span class="card-badge">Data Structure</span>
-                    </div>
-                </div>
-                <p class="card-description">FIFO (First In First Out) data structure. Elements are added at rear and removed from front. Supports enqueue, dequeue operations.</p>
-                <div class="card-meta">
-                    <div class="complexity">
-                        <span class="complexity-badge time-complexity">
-                            <i class="fas fa-clock"></i> O(1) Enqueue
-                        </span>
-                        <span class="complexity-badge space-complexity">
-                            <i class="fas fa-memory"></i> O(n)
-                        </span>
-                    </div>
-                    <button class="explore-btn">
-                        Explore <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
         </div>
 
         <!-- Documentation Section -->
@@ -2688,82 +2328,6 @@ $user_email = $_SESSION['user_email'];
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <a href="#" class="footer-logo">
-                    <div class="footer-logo-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <div class="footer-logo-text">
-                        <h3>Algorithm Visualizer Pro</h3>
-                    </div>
-                </a>
-                <p class="footer-description">
-                    Interactive platform for learning and visualizing algorithms with beautiful animations and detailed implementations.
-                </p>
-                <div class="social-links">
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="social-icon">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h4 class="footer-title">Categories</h4>
-                <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-sort-amount-down"></i> Sorting Algorithms</a></li>
-                    <li><a href="#"><i class="fas fa-search"></i> Searching Algorithms</a></li>
-                    <li><a href="#"><i class="fas fa-link"></i> Linked List</a></li>
-                    <li><a href="#"><i class="fas fa-stream"></i> Queue</a></li>
-                    <li><a href="#"><i class="fas fa-project-diagram"></i> Graph Algorithms</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h4 class="footer-title">Resources</h4>
-                <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-book"></i> Documentation</a></li>
-                    <li><a href="#"><i class="fas fa-code"></i> Code Examples</a></li>
-                    <li><a href="#"><i class="fas fa-video"></i> Tutorials</a></li>
-                    <li><a href="#"><i class="fas fa-file-alt"></i> Blog</a></li>
-                    <li><a href="#"><i class="fas fa-question-circle"></i> Help Center</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h4 class="footer-title">Contact</h4>
-                <ul class="footer-links">
-                    <li><a href="#"><i class="fas fa-envelope"></i> support@algorithmviz.com</a></li>
-                    <li><a href="#"><i class="fas fa-phone"></i> +1 (555) 123-4567</a></li>
-                    <li><a href="#"><i class="fas fa-map-marker-alt"></i> San Francisco, CA</a></li>
-                    <li><a href="#"><i class="fas fa-comment"></i> Live Chat</a></li>
-                    <li><a href="#"><i class="fas fa-bug"></i> Report Issue</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p class="copyright">© 2024 Algorithm Visualizer Pro. All rights reserved.</p>
-            <div class="footer-bottom-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Cookie Policy</a>
-                <a href="#">Sitemap</a>
-            </div>
-        </div>
-    </footer>
-
     <!-- Toast Container -->
     <div class="toast-container" id="toastContainer"></div>
 
@@ -2778,7 +2342,6 @@ $user_email = $_SESSION['user_email'];
         let currentFunctionality = 'visualize';
         let currentArray = [64, 34, 25, 12, 22, 11, 90, 45];
         let linkedList = [23, 45, 67, 12, 89, 34];
-        let queue = [10, 20, 30, 40, 50];
         let nodeAddresses = new Map();
         let visualizationRunning = false;
         let speed = 500;
@@ -2789,9 +2352,7 @@ $user_email = $_SESSION['user_email'];
             operations: 0,
             time: 0,
             foundIndex: -1,
-            traversalSteps: 0,
-            enqueueCount: 0,
-            dequeueCount: 0
+            traversalSteps: 0
         };
 
         // Complete Documentation Data with Enhanced C++ Code
@@ -3761,452 +3322,6 @@ using namespace std;
                 },
                 functionalities: ['insert', 'delete', 'traverse'],
                 defaultArray: [23, 45, 67, 12, 89, 34]
-            },
-            queue: {
-                title: "Queue Data Structure",
-                subtitle: "FIFO (First In First Out) data structure",
-                icon: "fas fa-stream",
-                color: "#3b82f6",
-                category: "queue",
-                description: "A Queue is a linear data structure that follows the FIFO (First In First Out) principle. Elements are added at the rear and removed from the front.",
-                sections: {
-                    overview: {
-                        title: "Overview",
-                        icon: "fas fa-info-circle",
-                        content: `
-                            <div class="algorithm-steps">
-                                <div class="step" style="animation-delay: 0.1s">
-                                    <div class="step-number">
-                                        <div class="step-circle">1</div>
-                                        <div class="step-title">Queue Fundamentals</div>
-                                    </div>
-                                    <div class="step-content">
-                                        <p>A queue is a linear data structure that follows the FIFO (First In First Out) principle. The element that is inserted first will be removed first.</p>
-                                        <ul>
-                                            <li><strong>Enqueue:</strong> Add an element to the rear of the queue</li>
-                                            <li><strong>Dequeue:</strong> Remove an element from the front of the queue</li>
-                                            <li><strong>Front:</strong> Get the front element without removing it</li>
-                                            <li><strong>Rear:</strong> Get the rear element without removing it</li>
-                                            <li><strong>IsEmpty:</strong> Check if queue is empty</li>
-                                            <li><strong>IsFull:</strong> Check if queue is full (in fixed-size queues)</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="step" style="animation-delay: 0.2s">
-                                    <div class="step-number">
-                                        <div class="step-circle">2</div>
-                                        <div class="step-title">Queue Operations</div>
-                                    </div>
-                                    <div class="step-content">
-                                        <ul>
-                                            <li><strong>enqueue(item):</strong> Adds an item to the rear of the queue</li>
-                                            <li><strong>dequeue():</strong> Removes and returns the front item</li>
-                                            <li><strong>front():</strong> Returns the front item without removing it</li>
-                                            <li><strong>rear():</strong> Returns the rear item without removing it</li>
-                                            <li><strong>isEmpty():</strong> Checks if the queue is empty</li>
-                                            <li><strong>isFull():</strong> Checks if the queue is full (for fixed-size)</li>
-                                            <li><strong>size():</strong> Returns the number of elements in queue</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="step" style="animation-delay: 0.3s">
-                                    <div class="step-number">
-                                        <div class="step-circle">3</div>
-                                        <div class="step-title">Queue Implementation Types</div>
-                                    </div>
-                                    <div class="step-content">
-                                        <ul>
-                                            <li><strong>Simple Queue:</strong> Basic FIFO queue</li>
-                                            <li><strong>Circular Queue:</strong> Last position connected back to first</li>
-                                            <li><strong>Priority Queue:</strong> Elements served based on priority</li>
-                                            <li><strong>Deque (Double-ended Queue):</strong> Insert/delete from both ends</li>
-                                            <li><strong>Linked List Queue:</strong> Dynamic size using linked list</li>
-                                            <li><strong>Array Queue:</strong> Fixed size using array</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        `
-                    },
-                    cppCode: {
-                        title: "C++ Implementation",
-                        icon: "fas fa-code",
-                        content: `
-                            <div class="code-container">
-                                <div class="code-header">
-                                    <div class="code-title">
-                                        <i class="fab fa-cuttlefish"></i>
-                                        <span>Complete Queue Implementation</span>
-                                    </div>
-                                    <div class="code-actions">
-                                        <button class="code-btn" onclick="copyCode('queue-cpp')">
-                                            <i class="fas fa-copy"></i> Copy
-                                        </button>
-                                        <button class="code-btn" onclick="runCode('queue')">
-                                            <i class="fas fa-play"></i> Run
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="code-body">
-                                    <pre id="queue-cpp" class="code-editor"><code class="code-content">#include &lt;iostream&gt;
-#include &lt;queue&gt;
-#include &lt;vector&gt;
-
-using namespace std;
-
-<span class="code-comment">// Array-based Queue Implementation</span>
-<span class="code-keyword">class</span> <span class="code-type">ArrayQueue</span> {
-<span class="code-keyword">private</span>:
-    <span class="code-type">int</span> front, rear, size;
-    <span class="code-type">int</span> capacity;
-    <span class="code-type">int</span>* array;
-    
-<span class="code-keyword">public</span>:
-    <span class="code-comment">// Constructor to initialize queue</span>
-    <span class="code-function">ArrayQueue</span>(<span class="code-type">int</span> cap) {
-        capacity = cap;
-        front = size = <span class="code-number">0</span>;
-        rear = capacity - <span class="code-number">1</span>;
-        array = <span class="code-keyword">new</span> <span class="code-type">int</span>[capacity];
-    }
-    
-    <span class="code-comment">// Destructor</span>
-    ~<span class="code-function">ArrayQueue</span>() {
-        <span class="code-keyword">delete</span>[] array;
-    }
-    
-    <span class="code-comment">// Check if queue is full</span>
-    <span class="code-type">bool</span> <span class="code-function">isFull</span>() {
-        <span class="code-keyword">return</span> size == capacity;
-    }
-    
-    <span class="code-comment">// Check if queue is empty</span>
-    <span class="code-type">bool</span> <span class="code-function">isEmpty</span>() {
-        <span class="code-keyword">return</span> size == <span class="code-number">0</span>;
-    }
-    
-    <span class="code-comment">// Add element to queue</span>
-    <span class="code-type">void</span> <span class="code-function">enqueue</span>(<span class="code-type">int</span> item) {
-        <span class="code-keyword">if</span> (<span class="code-function">isFull</span>()) {
-            cout << <span class="code-string">"Queue overflow!\\n"</span>;
-            <span class="code-keyword">return</span>;
-        }
-        rear = (rear + <span class="code-number">1</span>) % capacity;
-        array[rear] = item;
-        size++;
-        cout << item << <span class="code-string">" enqueued to queue\\n"</span>;
-    }
-    
-    <span class="code-comment">// Remove element from queue</span>
-    <span class="code-type">int</span> <span class="code-function">dequeue</span>() {
-        <span class="code-keyword">if</span> (<span class="code-function">isEmpty</span>()) {
-            cout << <span class="code-string">"Queue underflow!\\n"</span>;
-            <span class="code-keyword">return</span> INT_MIN;
-        }
-        <span class="code-type">int</span> item = array[front];
-        front = (front + <span class="code-number">1</span>) % capacity;
-        size--;
-        <span class="code-keyword">return</span> item;
-    }
-    
-    <span class="code-comment">// Get front element</span>
-    <span class="code-type">int</span> <span class="code-function">getFront</span>() {
-        <span class="code-keyword">if</span> (<span class="code-function">isEmpty</span>()) {
-            cout << <span class="code-string">"Queue is empty!\\n"</span>;
-            <span class="code-keyword">return</span> INT_MIN;
-        }
-        <span class="code-keyword">return</span> array[front];
-    }
-    
-    <span class="code-comment">// Get rear element</span>
-    <span class="code-type">int</span> <span class="code-function">getRear</span>() {
-        <span class="code-keyword">if</span> (<span class="code-function">isEmpty</span>()) {
-            cout << <span class="code-string">"Queue is empty!\\n"</span>;
-            <span class="code-keyword">return</span> INT_MIN;
-        }
-        <span class="code-keyword">return</span> array[rear];
-    }
-    
-    <span class="code-comment">// Get queue size</span>
-    <span class="code-type">int</span> <span class="code-function">getSize</span>() {
-        <span class="code-keyword">return</span> size;
-    }
-    
-    <span class="code-comment">// Display queue elements</span>
-    <span class="code-type">void</span> <span class="code-function">display</span>() {
-        <span class="code-keyword">if</span> (<span class="code-function">isEmpty</span>()) {
-            cout << <span class="code-string">"Queue is empty\\n"</span>;
-            <span class="code-keyword">return</span>;
-        }
-        
-        cout << <span class="code-string">"Queue elements: "</span>;
-        <span class="code-keyword">for</span> (<span class="code-type">int</span> i = <span class="code-number">0</span>; i < size; i++) {
-            <span class="code-type">int</span> index = (front + i) % capacity;
-            cout << array[index] << <span class="code-string">" "</span>;
-        }
-        cout << endl;
-        cout << <span class="code-string">"Front: "</span> << <span class="code-function">getFront</span>() << <span class="code-string">", Rear: "</span> << <span class="code-function">getRear</span>() << <span class="code-string">", Size: "</span> << size << endl;
-    }
-};
-
-<span class="code-comment">// Linked List based Queue</span>
-<span class="code-keyword">template</span> &lt;<span class="code-keyword">typename</span> T&gt;
-<span class="code-keyword">class</span> <span class="code-type">LinkedListQueue</span> {
-<span class="code-keyword">private</span>:
-    <span class="code-keyword">struct</span> <span class="code-type">Node</span> {
-        T data;
-        Node* next;
-        <span class="code-function">Node</span>(T val) : <span class="code-function">data</span>(val), <span class="code-function">next</span>(<span class="code-keyword">nullptr</span>) {}
-    };
-    
-    Node* front;
-    Node* rear;
-    <span class="code-type">int</span> size;
-    
-<span class="code-keyword">public</span>:
-    <span class="code-function">LinkedListQueue</span>() : <span class="code-function">front</span>(<span class="code-keyword">nullptr</span>), <span class="code-function">rear</span>(<span class="code-keyword">nullptr</span>), <span class="code-function">size</span>(<span class="code-number">0</span>) {}
-    
-    ~<span class="code-function">LinkedListQueue</span>() {
-        <span class="code-keyword">while</span> (!<span class="code-function">isEmpty</span>()) {
-            <span class="code-function">dequeue</span>();
-        }
-    }
-    
-    <span class="code-type">bool</span> <span class="code-function">isEmpty</span>() {
-        <span class="code-keyword">return</span> front == <span class="code-keyword">nullptr</span>;
-    }
-    
-    <span class="code-type">void</span> <span class="code-function">enqueue</span>(T item) {
-        Node* newNode = <span class="code-keyword">new</span> <span class="code-function">Node</span>(item);
-        
-        <span class="code-keyword">if</span> (<span class="code-function">isEmpty</span>()) {
-            front = rear = newNode;
-        } <span class="code-keyword">else</span> {
-            rear->next = newNode;
-            rear = newNode;
-        }
-        size++;
-        cout << item << <span class="code-string">" enqueued to queue\\n"</span>;
-    }
-    
-    T <span class="code-function">dequeue</span>() {
-        <span class="code-keyword">if</span> (<span class="code-function">isEmpty</span>()) {
-            cout << <span class="code-string">"Queue underflow!\\n"</span>;
-            <span class="code-keyword">return</span> T();
-        }
-        
-        Node* temp = front;
-        T item = front->data;
-        front = front->next;
-        
-        <span class="code-keyword">if</span> (front == <span class="code-keyword">nullptr</span>) {
-            rear = <span class="code-keyword">nullptr</span>;
-        }
-        
-        <span class="code-keyword">delete</span> temp;
-        size--;
-        <span class="code-keyword">return</span> item;
-    }
-    
-    T <span class="code-function">getFront</span>() {
-        <span class="code-keyword">if</span> (<span class="code-function">isEmpty</span>()) {
-            cout << <span class="code-string">"Queue is empty!\\n"</span>;
-            <span class="code-keyword">return</span> T();
-        }
-        <span class="code-keyword">return</span> front->data;
-    }
-    
-    T <span class="code-function">getRear</span>() {
-        <span class="code-keyword">if</span> (<span class="code-function">isEmpty</span>()) {
-            cout << <span class="code-string">"Queue is empty!\\n"</span>;
-            <span class="code-keyword">return</span> T();
-        }
-        <span class="code-keyword">return</span> rear->data;
-    }
-    
-    <span class="code-type">int</span> <span class="code-function">getSize</span>() {
-        <span class="code-keyword">return</span> size;
-    }
-    
-    <span class="code-type">void</span> <span class="code-function">display</span>() {
-        <span class="code-keyword">if</span> (<span class="code-function">isEmpty</span>()) {
-            cout << <span class="code-string">"Queue is empty\\n"</span>;
-            <span class="code-keyword">return</span>;
-        }
-        
-        cout << <span class="code-string">"Queue elements: "</span>;
-        Node* current = front;
-        <span class="code-keyword">while</span> (current) {
-            cout << current->data << <span class="code-string">" "</span>;
-            current = current->next;
-        }
-        cout << endl;
-        cout << <span class="code-string">"Front: "</span> << <span class="code-function">getFront</span>() << <span class="code-string">", Rear: "</span> << <span class="code-function">getRear</span>() << <span class="code-string">", Size: "</span> << size << endl;
-    }
-};
-
-<span class="code-type">int</span> <span class="code-function">main</span>() {
-    cout << <span class="code-string">"=== Array-based Queue Implementation ===\\n"</span>;
-    ArrayQueue <span class="code-function">queue</span>(<span class="code-number">5</span>);
-    
-    queue.<span class="code-function">enqueue</span>(<span class="code-number">10</span>);
-    queue.<span class="code-function">enqueue</span>(<span class="code-number">20</span>);
-    queue.<span class="code-function">enqueue</span>(<span class="code-number">30</span>);
-    queue.<span class="code-function">enqueue</span>(<span class="code-number">40</span>);
-    queue.<span class="code-function">enqueue</span>(<span class="code-number">50</span>);
-    queue.<span class="code-function">display</span>();
-    
-    cout << <span class="code-string">"\\nDequeued: "</span> << queue.<span class="code-function">dequeue</span>() << endl;
-    cout << <span class="code-string">"Dequeued: "</span> << queue.<span class="code-function">dequeue</span>() << endl;
-    queue.<span class="code-function">display</span>();
-    
-    queue.<span class="code-function">enqueue</span>(<span class="code-number">60</span>);
-    queue.<span class="code-function">enqueue</span>(<span class="code-number">70</span>);
-    queue.<span class="code-function">display</span>();
-    
-    cout << <span class="code-string">"\\n=== Linked List Queue Implementation ===\\n"</span>;
-    LinkedListQueue<<span class="code-type">int</span>> llQueue;
-    
-    llQueue.<span class="code-function">enqueue</span>(<span class="code-number">100</span>);
-    llQueue.<span class="code-function">enqueue</span>(<span class="code-number">200</span>);
-    llQueue.<span class="code-function">enqueue</span>(<span class="code-number">300</span>);
-    llQueue.<span class="code-function">display</span>();
-    
-    cout << <span class="code-string">"\\nDequeued: "</span> << llQueue.<span class="code-function">dequeue</span>() << endl;
-    llQueue.<span class="code-function">display</span>();
-    
-    cout << <span class="code-string">"\\nFront element: "</span> << llQueue.<span class="code-function">getFront</span>() << endl;
-    cout << <span class="code-string">"Rear element: "</span> << llQueue.<span class="code-function">getRear</span>() << endl;
-    cout << <span class="code-string">"Queue size: "</span> << llQueue.<span class="code-function">getSize</span>() << endl;
-    
-    <span class="code-keyword">return</span> <span class="code-number">0</span>;
-}</code></pre>
-                                </div>
-                            </div>
-                        `
-                    },
-                    complexity: {
-                        title: "Complexity Analysis",
-                        icon: "fas fa-chart-line",
-                        content: `
-                            <div class="complexity-chart">
-                                <h3>Time & Space Complexity</h3>
-                                <div class="chart-grid">
-                                    <div class="chart-item">
-                                        <div class="chart-label">Enqueue Operation</div>
-                                        <div class="chart-value best">O(1)</div>
-                                        <div class="chart-description">Constant time for adding element</div>
-                                    </div>
-                                    <div class="chart-item">
-                                        <div class="chart-label">Dequeue Operation</div>
-                                        <div class="chart-value best">O(1)</div>
-                                        <div class="chart-description">Constant time for removing element</div>
-                                    </div>
-                                    <div class="chart-item">
-                                        <div class="chart-label">Front/Rear Access</div>
-                                        <div class="chart-value best">O(1)</div>
-                                        <div class="chart-description">Constant time access</div>
-                                    </div>
-                                    <div class="chart-item">
-                                        <div class="chart-label">Space Complexity</div>
-                                        <div class="chart-value space">O(n)</div>
-                                        <div class="chart-description">Linear space for storing elements</div>
-                                    </div>
-                                </div>
-                                
-                                <div class="step" style="animation-delay: 0.4s; margin-top: 2rem;">
-                                    <div class="step-number">
-                                        <div class="step-circle">4</div>
-                                        <div class="step-title">Performance Characteristics</div>
-                                    </div>
-                                    <div class="step-content">
-                                        <p><strong>Array Implementation:</strong></p>
-                                        <ul>
-                                            <li>Fixed size, may require resizing</li>
-                                            <li>Memory efficient (contiguous memory)</li>
-                                            <li>Circular queue avoids memory wastage</li>
-                                        </ul>
-                                        
-                                        <p><strong>Linked List Implementation:</strong></p>
-                                        <ul>
-                                            <li>Dynamic size, no fixed capacity</li>
-                                            <li>Extra memory for pointers</li>
-                                            <li>Better for variable sized queues</li>
-                                        </ul>
-                                        
-                                        <p><strong>Standard Library (queue):</strong></p>
-                                        <ul>
-                                            <li>Uses deque by default</li>
-                                            <li>Provides all basic operations</li>
-                                            <li>Type-safe and efficient</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        `
-                    },
-                    applications: {
-                        title: "Applications & Use Cases",
-                        icon: "fas fa-rocket",
-                        content: `
-                            <div class="algorithm-steps">
-                                <div class="step" style="animation-delay: 0.1s">
-                                    <div class="step-number">
-                                        <div class="step-circle">1</div>
-                                        <div class="step-title">Operating Systems</div>
-                                    </div>
-                                    <div class="step-content">
-                                        <ul>
-                                            <li><strong>Process Scheduling:</strong> CPU scheduling algorithms</li>
-                                            <li><strong>Disk Scheduling:</strong> Disk I/O request handling</li>
-                                            <li><strong>Print Spooling:</strong> Managing print jobs</li>
-                                            <li><strong>Memory Management:</strong> Page replacement algorithms</li>
-                                            <li><strong>Interrupt Handling:</strong> Managing interrupt requests</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="step" style="animation-delay: 0.2s">
-                                    <div class="step-number">
-                                        <div class="step-circle">2</div>
-                                        <div class="step-title">Networking</div>
-                                    </div>
-                                    <div class="step-content">
-                                        <ul>
-                                            <li><strong>Packet Buffering:</strong> Network routers and switches</li>
-                                            <li><strong>Message Queues:</strong> Inter-process communication</li>
-                                            <li><strong>Bandwidth Management:</strong> Traffic shaping</li>
-                                            <li><strong>Request Handling:</strong> Web server request queues</li>
-                                            <li><strong>Data Streaming:</strong> Audio/video buffering</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="step" style="animation-delay: 0.3s">
-                                    <div class="step-number">
-                                        <div class="step-circle">3</div>
-                                        <div class="step-title">Real-world Applications</div>
-                                    </div>
-                                    <div class="step-content">
-                                        <ul>
-                                            <li><strong>Call Center Systems:</strong> Customer service queues</li>
-                                            <li><strong>Ticket Booking:</strong> Reservation systems</li>
-                                            <li><strong>Breadth-First Search:</strong> Graph traversal algorithm</li>
-                                            <li><strong>Cache Implementation:</strong> LRU cache implementation</li>
-                                            <li><strong>Simulation:</strong> Discrete event simulation</li>
-                                            <li><strong>Task Management:</strong> Job/task scheduling</li>
-                                            <li><strong>Data Processing:</strong> Producer-consumer problems</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        `
-                    }
-                },
-                functionalities: ['enqueue', 'dequeue'],
-                defaultArray: [10, 20, 30, 40, 50]
             }
         };
 
@@ -4332,9 +3447,7 @@ using namespace std;
                 search: 'fas fa-search',
                 insert: 'fas fa-plus-circle',
                 delete: 'fas fa-trash',
-                traverse: 'fas fa-walking',
-                enqueue: 'fas fa-sign-in-alt',
-                dequeue: 'fas fa-sign-out-alt'
+                traverse: 'fas fa-walking'
             };
             return icons[func] || 'fas fa-cog';
         }
@@ -4345,9 +3458,7 @@ using namespace std;
                 search: 'Search',
                 insert: 'Insert',
                 delete: 'Delete',
-                traverse: 'Traverse',
-                enqueue: 'Enqueue',
-                dequeue: 'Dequeue'
+                traverse: 'Traverse'
             };
             return names[func] || func;
         }
@@ -4379,12 +3490,10 @@ using namespace std;
             document.querySelectorAll('.func-btn').forEach(btn => btn.classList.remove('active'));
             event.currentTarget.classList.add('active');
             
-            // Initialize data based on algorithm
+            // Initialize data
             if (currentAlgorithm === 'linkedlist') {
                 initializeNodeAddresses();
                 updateLinkedListVisualization();
-            } else if (currentAlgorithm === 'queue') {
-                updateQueueVisualization();
             } else {
                 currentArray = [...documentation[currentAlgorithm].defaultArray];
                 if (func === 'search') {
@@ -4499,72 +3608,6 @@ using namespace std;
                         </div>
                     `;
                 }
-            } else if (currentAlgorithm === 'queue') {
-                if (func === 'enqueue') {
-                    controlsGrid.innerHTML = `
-                        <div class="control-group">
-                            <label class="control-label"><i class="fas fa-sliders-h"></i> Queue Controls</label>
-                            <div class="control-buttons">
-                                <button class="control-btn btn-primary" onclick="enqueueAtFront()">
-                                    <i class="fas fa-plus"></i> Enqueue at Front
-                                </button>
-                                <button class="control-btn btn-success" onclick="enqueueAtRear()">
-                                    <i class="fas fa-plus-circle"></i> Enqueue at Rear
-                                </button>
-                                <button class="control-btn btn-warning" onclick="generateRandomQueue()">
-                                    <i class="fas fa-random"></i> Random Queue
-                                </button>
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label"><i class="fas fa-hashtag"></i> Element Value</label>
-                            <input type="number" class="control-input" id="queueValue" min="1" max="100" value="60">
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label"><i class="fas fa-tachometer-alt"></i> Speed</label>
-                            <select class="control-select" id="speed" onchange="changeSpeed(this.value)">
-                                <option value="1000">Slow</option>
-                                <option value="500" selected>Medium</option>
-                                <option value="250">Fast</option>
-                                <option value="100">Very Fast</option>
-                            </select>
-                        </div>
-                    `;
-                } else if (func === 'dequeue') {
-                    controlsGrid.innerHTML = `
-                        <div class="control-group">
-                            <label class="control-label"><i class="fas fa-sliders-h"></i> Queue Controls</label>
-                            <div class="control-buttons">
-                                <button class="control-btn btn-danger" onclick="dequeueFromFront()">
-                                    <i class="fas fa-minus"></i> Dequeue from Front
-                                </button>
-                                <button class="control-btn btn-warning" onclick="dequeueFromRear()">
-                                    <i class="fas fa-minus-circle"></i> Dequeue from Rear
-                                </button>
-                                <button class="control-btn btn-warning" onclick="generateRandomQueue()">
-                                    <i class="fas fa-random"></i> Random Queue
-                                </button>
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label"><i class="fas fa-bullseye"></i> Dequeue Position</label>
-                            <select class="control-select" id="dequeuePosition">
-                                <option value="front">Front (FIFO)</option>
-                                <option value="rear">Rear (LIFO)</option>
-                                <option value="middle">Middle (Custom)</option>
-                            </select>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label"><i class="fas fa-tachometer-alt"></i> Speed</label>
-                            <select class="control-select" id="speed" onchange="changeSpeed(this.value)">
-                                <option value="1000">Slow</option>
-                                <option value="500" selected>Medium</option>
-                                <option value="250">Fast</option>
-                                <option value="100">Very Fast</option>
-                            </select>
-                        </div>
-                    `;
-                }
             } else if (func === 'search') {
                 controlsGrid.innerHTML = `
                     <div class="control-group">
@@ -4658,20 +3701,6 @@ using namespace std;
                     </div>
                 `;
                 updateLinkedListVisualization();
-            } else if (currentAlgorithm === 'queue') {
-                visualizationArea.innerHTML = `
-                    <div class="queue-container">
-                        <div class="queue-visualization" id="queueVisualization">
-                            <!-- Queue elements will be dynamically added here -->
-                        </div>
-                        <div class="queue-status">
-                            <div class="queue-info" id="queueInfo">
-                                <!-- Queue info will be dynamically added here -->
-                            </div>
-                        </div>
-                    </div>
-                `;
-                updateQueueVisualization();
             } else if (func === 'visualize') {
                 visualizationArea.innerHTML = `
                     <div class="array-container" id="graphContainer">
@@ -4751,8 +3780,12 @@ using namespace std;
                     </div>
                     <div class="node-pointers">
                         <div class="pointer">
-                            <span class="pointer-label">Next:</span>
-                            <span class="pointer-address">${index < linkedList.length - 1 ? nodeAddresses.get(index + 1) : 'NULL'}</span>
+                            <div class="pointer-label">Address</div>
+                            <div class="pointer-address">${nodeAddresses.get(index)}</div>
+                        </div>
+                        <div class="pointer">
+                            <div class="pointer-label">Next</div>
+                            <div class="pointer-address">${index < linkedList.length - 1 ? nodeAddresses.get(index + 1) : 'NULL'}</div>
                         </div>
                     </div>
                 `;
@@ -4772,76 +3805,6 @@ using namespace std;
             });
         }
 
-        function updateQueueVisualization() {
-            const container = document.getElementById('queueVisualization');
-            if (!container) return;
-            
-            container.innerHTML = '';
-            
-            if (queue.length === 0) {
-                container.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--text-light);">Empty Queue</div>';
-                updateQueueInfo();
-                return;
-            }
-            
-            // Add front pointer
-            if (queue.length > 0) {
-                const frontPointer = document.createElement('div');
-                frontPointer.className = 'front-pointer';
-                frontPointer.innerHTML = '<i class="fas fa-arrow-down"></i> Front';
-                frontPointer.style.left = '50px';
-                container.appendChild(frontPointer);
-            }
-            
-            // Add rear pointer
-            if (queue.length > 0) {
-                const rearPointer = document.createElement('div');
-                rearPointer.className = 'rear-pointer';
-                rearPointer.innerHTML = '<i class="fas fa-arrow-up"></i> Rear';
-                rearPointer.style.right = '50px';
-                container.appendChild(rearPointer);
-            }
-            
-            // Add queue elements
-            queue.forEach((value, index) => {
-                const element = document.createElement('div');
-                element.className = 'queue-element';
-                element.innerHTML = `
-                    <div class="queue-value">${value}</div>
-                    <div class="queue-position">${index}</div>
-                `;
-                element.dataset.index = index;
-                element.dataset.value = value;
-                container.appendChild(element);
-            });
-            
-            updateQueueInfo();
-        }
-
-        function updateQueueInfo() {
-            const queueInfo = document.getElementById('queueInfo');
-            if (!queueInfo) return;
-            
-            queueInfo.innerHTML = `
-                <div class="info-item">
-                    <div class="info-value front-value">${queue.length > 0 ? queue[0] : 'Empty'}</div>
-                    <div class="info-label">Front Element</div>
-                </div>
-                <div class="info-item">
-                    <div class="info-value rear-value">${queue.length > 0 ? queue[queue.length - 1] : 'Empty'}</div>
-                    <div class="info-label">Rear Element</div>
-                </div>
-                <div class="info-item">
-                    <div class="info-value size-value">${queue.length}</div>
-                    <div class="info-label">Queue Size</div>
-                </div>
-                <div class="info-item">
-                    <div class="info-value operations-count">${metrics.enqueueCount + metrics.dequeueCount}</div>
-                    <div class="info-label">Total Operations</div>
-                </div>
-            `;
-        }
-
         function updateInfoPanel() {
             const infoGrid = document.getElementById('infoGrid');
             const doc = documentation[currentAlgorithm];
@@ -4851,8 +3814,8 @@ using namespace std;
                     <div class="info-icon">
                         <i class="fas fa-layer-group"></i>
                     </div>
-                    <div class="info-value array-size">${currentAlgorithm === 'linkedlist' ? linkedList.length : currentAlgorithm === 'queue' ? queue.length : currentArray.length}</div>
-                    <div class="info-label">${currentAlgorithm === 'linkedlist' ? 'Nodes' : currentAlgorithm === 'queue' ? 'Elements' : 'Elements'}</div>
+                    <div class="info-value array-size">${currentAlgorithm === 'linkedlist' ? linkedList.length : currentArray.length}</div>
+                    <div class="info-label">${currentAlgorithm === 'linkedlist' ? 'Nodes' : 'Elements'}</div>
                 </div>
                 
                 <div class="info-card">
@@ -4884,24 +3847,6 @@ using namespace std;
                         </div>
                     `;
                 }
-            } else if (currentAlgorithm === 'queue') {
-                infoHTML += `
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-sign-in-alt"></i>
-                        </div>
-                        <div class="info-value enqueue-count">${metrics.enqueueCount}</div>
-                        <div class="info-label">Enqueue Count</div>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-sign-out-alt"></i>
-                        </div>
-                        <div class="info-value dequeue-count">${metrics.dequeueCount}</div>
-                        <div class="info-label">Dequeue Count</div>
-                    </div>
-                `;
             } else if (currentFunctionality === 'search') {
                 infoHTML += `
                     <div class="info-card">
@@ -4941,130 +3886,6 @@ using namespace std;
             }
             
             infoGrid.innerHTML = infoHTML;
-        }
-
-        // Queue Operations
-        async function enqueueAtFront() {
-            if (visualizationRunning) return;
-            visualizationRunning = true;
-            
-            const value = parseInt(document.getElementById('queueValue').value) || 60;
-            
-            // Add to front of queue
-            queue.unshift(value);
-            metrics.enqueueCount++;
-            metrics.operations++;
-            updateInfoPanel();
-            
-            // Update visualization
-            updateQueueVisualization();
-            
-            // Highlight new element
-            const elements = document.querySelectorAll('.queue-element');
-            if (elements[0]) {
-                elements[0].classList.add('enqueuing');
-                await sleep(1000);
-                elements[0].classList.remove('enqueuing');
-            }
-            
-            showToast(`Enqueued ${value} at front`, 'success');
-            visualizationRunning = false;
-        }
-
-        async function enqueueAtRear() {
-            if (visualizationRunning) return;
-            visualizationRunning = true;
-            
-            const value = parseInt(document.getElementById('queueValue').value) || 60;
-            
-            // Add to rear of queue
-            queue.push(value);
-            metrics.enqueueCount++;
-            metrics.operations++;
-            updateInfoPanel();
-            
-            // Update visualization
-            updateQueueVisualization();
-            
-            // Highlight new element
-            const elements = document.querySelectorAll('.queue-element');
-            if (elements[elements.length - 1]) {
-                elements[elements.length - 1].classList.add('enqueuing');
-                await sleep(1000);
-                elements[elements.length - 1].classList.remove('enqueuing');
-            }
-            
-            showToast(`Enqueued ${value} at rear`, 'success');
-            visualizationRunning = false;
-        }
-
-        async function dequeueFromFront() {
-            if (visualizationRunning) return;
-            if (queue.length === 0) {
-                showToast('Queue is empty!', 'error');
-                return;
-            }
-            
-            visualizationRunning = true;
-            
-            const position = document.getElementById('dequeuePosition')?.value || 'front';
-            let removedValue;
-            
-            if (position === 'front') {
-                // Remove from front (FIFO)
-                removedValue = queue.shift();
-            } else if (position === 'rear') {
-                // Remove from rear (LIFO)
-                removedValue = queue.pop();
-            } else if (position === 'middle') {
-                // Remove from middle
-                const middleIndex = Math.floor(queue.length / 2);
-                removedValue = queue.splice(middleIndex, 1)[0];
-            }
-            
-            metrics.dequeueCount++;
-            metrics.operations++;
-            updateInfoPanel();
-            
-            // Update visualization
-            updateQueueVisualization();
-            
-            showToast(`Dequeued ${removedValue} from ${position}`, 'warning');
-            visualizationRunning = false;
-        }
-
-        async function dequeueFromRear() {
-            if (visualizationRunning) return;
-            if (queue.length === 0) {
-                showToast('Queue is empty!', 'error');
-                return;
-            }
-            
-            visualizationRunning = true;
-            
-            // Remove from rear
-            const removedValue = queue.pop();
-            metrics.dequeueCount++;
-            metrics.operations++;
-            updateInfoPanel();
-            
-            // Update visualization
-            updateQueueVisualization();
-            
-            showToast(`Dequeued ${removedValue} from rear`, 'warning');
-            visualizationRunning = false;
-        }
-
-        function generateRandomQueue() {
-            const size = Math.floor(Math.random() * 6) + 4;
-            queue = [];
-            for (let i = 0; i < size; i++) {
-                queue.push(Math.floor(Math.random() * 100) + 1);
-            }
-            metrics.operations++;
-            updateQueueVisualization();
-            updateInfoPanel();
-            showToast(`Generated new queue with ${size} elements`, 'success');
         }
 
         // Enhanced Linked List Animations
@@ -5110,8 +3931,8 @@ using namespace std;
             // Add traversing pointer animation from head
             const traversingPointer = document.getElementById('traversingPointer');
             traversingPointer.style.display = 'block';
-            traversingPointer.style.left = '30px';
-            traversingPointer.style.top = '-30px';
+            traversingPointer.style.left = '50px';
+            traversingPointer.style.top = '-40px';
             
             await sleep(speed);
             
@@ -5146,8 +3967,8 @@ using namespace std;
             traversingPointer.style.display = 'block';
             
             // Start from head
-            traversingPointer.style.left = '30px';
-            traversingPointer.style.top = '-30px';
+            traversingPointer.style.left = '50px';
+            traversingPointer.style.top = '-40px';
             
             const nodes = document.querySelectorAll('.linked-list-node');
             const arrows = document.querySelectorAll('.linked-list-arrow');
@@ -5158,7 +3979,7 @@ using namespace std;
                 
                 // Move traversing pointer
                 const nodeRect = nodes[i].getBoundingClientRect();
-                traversingPointer.style.left = (nodeRect.left + nodeRect.width / 2 - 30) + 'px';
+                traversingPointer.style.left = (nodeRect.left + nodeRect.width / 2 - 40) + 'px';
                 
                 // Highlight current node
                 nodes[i].classList.add('traversing');
@@ -5208,8 +4029,8 @@ using namespace std;
             traversingPointer.style.display = 'block';
             
             // Start from head
-            traversingPointer.style.left = '30px';
-            traversingPointer.style.top = '-30px';
+            traversingPointer.style.left = '50px';
+            traversingPointer.style.top = '-40px';
             
             const nodes = document.querySelectorAll('.linked-list-node');
             const arrows = document.querySelectorAll('.linked-list-arrow');
@@ -5221,7 +4042,7 @@ using namespace std;
                 // Move traversing pointer
                 if (nodes[i]) {
                     const nodeRect = nodes[i].getBoundingClientRect();
-                    traversingPointer.style.left = (nodeRect.left + nodeRect.width / 2 - 30) + 'px';
+                    traversingPointer.style.left = (nodeRect.left + nodeRect.width / 2 - 40) + 'px';
                     
                     // Highlight current node
                     nodes[i].classList.add('traversing');
@@ -5290,8 +4111,8 @@ using namespace std;
         async function deleteFromBeginning() {
             const traversingPointer = document.getElementById('traversingPointer');
             traversingPointer.style.display = 'block';
-            traversingPointer.style.left = '30px';
-            traversingPointer.style.top = '-30px';
+            traversingPointer.style.left = '50px';
+            traversingPointer.style.top = '-40px';
             
             await sleep(speed);
             
@@ -5324,8 +4145,8 @@ using namespace std;
             traversingPointer.style.display = 'block';
             
             // Start from head
-            traversingPointer.style.left = '30px';
-            traversingPointer.style.top = '-30px';
+            traversingPointer.style.left = '50px';
+            traversingPointer.style.top = '-40px';
             
             const nodes = document.querySelectorAll('.linked-list-node');
             const arrows = document.querySelectorAll('.linked-list-arrow');
@@ -5336,7 +4157,7 @@ using namespace std;
                 
                 // Move traversing pointer
                 const nodeRect = nodes[i].getBoundingClientRect();
-                traversingPointer.style.left = (nodeRect.left + nodeRect.width / 2 - 30) + 'px';
+                traversingPointer.style.left = (nodeRect.left + nodeRect.width / 2 - 40) + 'px';
                 
                 // Highlight current node
                 nodes[i].classList.add('traversing');
@@ -5385,8 +4206,8 @@ using namespace std;
             traversingPointer.style.display = 'block';
             
             // Start from head
-            traversingPointer.style.left = '30px';
-            traversingPointer.style.top = '-30px';
+            traversingPointer.style.left = '50px';
+            traversingPointer.style.top = '-40px';
             
             const nodes = document.querySelectorAll('.linked-list-node');
             const arrows = document.querySelectorAll('.linked-list-arrow');
@@ -5398,7 +4219,7 @@ using namespace std;
                 // Move traversing pointer
                 if (nodes[i]) {
                     const nodeRect = nodes[i].getBoundingClientRect();
-                    traversingPointer.style.left = (nodeRect.left + nodeRect.width / 2 - 30) + 'px';
+                    traversingPointer.style.left = (nodeRect.left + nodeRect.width / 2 - 40) + 'px';
                     
                     // Highlight current node
                     nodes[i].classList.add('traversing');
@@ -5449,8 +4270,8 @@ using namespace std;
             traversingPointer.style.display = 'block';
             
             // Start from head
-            traversingPointer.style.left = '30px';
-            traversingPointer.style.top = '-30px';
+            traversingPointer.style.left = '50px';
+            traversingPointer.style.top = '-40px';
             
             const nodes = document.querySelectorAll('.linked-list-node');
             const arrows = document.querySelectorAll('.linked-list-arrow');
@@ -5461,7 +4282,7 @@ using namespace std;
                 
                 // Move traversing pointer
                 const nodeRect = nodes[i].getBoundingClientRect();
-                traversingPointer.style.left = (nodeRect.left + nodeRect.width / 2 - 30) + 'px';
+                traversingPointer.style.left = (nodeRect.left + nodeRect.width / 2 - 40) + 'px';
                 
                 // Highlight current node and arrow
                 nodes[i].classList.add('traversing');
@@ -5892,9 +4713,7 @@ using namespace std;
                 operations: 0,
                 time: 0,
                 foundIndex: -1,
-                traversalSteps: 0,
-                enqueueCount: 0,
-                dequeueCount: 0
+                traversalSteps: 0
             };
         }
 
@@ -6144,7 +4963,7 @@ using namespace std;
                     { regex: /\b(include|define|ifdef|endif|ifndef)\b/g, className: 'code-macro' },
                     { regex: /\b(int|void|bool|char|double|float|short|long|using|namespace|class|struct|public|private|protected|return|new|delete|if|else|for|while|do|break|continue|switch|case|default|true|false|nullptr|template|typename|const|size_t|unique_ptr|make_unique)\b/g, className: 'code-keyword' },
                     { regex: /\b(cout|cin|endl|vector|string|swap|is_sorted|size|get|reset|release)\b/g, className: 'code-type' },
-                    { regex: /\b(Node|LinkedList|ArrayQueue|LinkedListQueue|enqueue|dequeue|getFront|getRear|isFull|isEmpty|getSize|display|insertAtBeginning|insertAtEnd|insertAtPosition|deleteFromBeginning|deleteFromEnd|search|reverse|bubbleSort|insertionSort|selectionSort|linearSearch|binarySearch)\b(?=\s*\()/g, className: 'code-function' },
+                    { regex: /\b(Node|LinkedList|insertAtBeginning|insertAtEnd|insertAtPosition|deleteFromBeginning|deleteFromEnd|search|display|reverse|isEmpty|getSize|bubbleSort|insertionSort|selectionSort|linearSearch|binarySearch|printArray)\b(?=\s*\()/g, className: 'code-function' },
                     { regex: /("[^"]*")/g, className: 'code-string' },
                     { regex: /(\/\/[^\n]*)/g, className: 'code-comment' },
                     { regex: /\b(\d+)\b/g, className: 'code-number' },
@@ -6160,4 +4979,5 @@ using namespace std;
         }
     </script>
 </body>
+
 </html>
