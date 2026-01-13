@@ -2869,6 +2869,32 @@ $user_email = $_SESSION['user_email'];
                     </button>
                 </div>
             </div>
+            <div class="algorithm-card" data-category="tree" onclick="window.open('bst.html', '_self')">
+                <div class="card-header">
+                    <div class="card-icon" style="background: var(--gradient-success);">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="card-title">
+                        <h3>Binary Search Tree</h3>
+                        <span class="card-badge">Data Structure</span>
+                    </div>
+                </div>
+                <p class="card-description">Hierarchical data structure where each node has at most two children,
+                    maintaining the binary search property for efficient searching, insertion, and deletion.</p>
+                <div class="card-meta">
+                    <div class="complexity">
+                        <span class="complexity-badge time-complexity">
+                            <i class="fas fa-clock"></i> O(log n)
+                        </span>
+                        <span class="complexity-badge space-complexity">
+                            <i class="fas fa-memory"></i> O(n)
+                        </span>
+                    </div>
+                    <button class="explore-btn" onclick="window.open('bst.html', '_self')">
+                        Explore <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
 
             <!-- Queue -->
             <div class="algorithm-card" data-category="queue" onclick="showDocumentation('queue')">
@@ -2901,32 +2927,7 @@ $user_email = $_SESSION['user_email'];
 
         <!-- Binary Search Tree -->
         <!-- Binary Search Tree -->
-<div class="algorithm-card" data-category="tree" onclick="window.open('bst.html', '_self')">
-    <div class="card-header">
-        <div class="card-icon" style="background: var(--gradient-success);">
-            <i class="fas fa-project-diagram"></i>
-        </div>
-        <div class="card-title">
-            <h3>Binary Search Tree</h3>
-            <span class="card-badge">Data Structure</span>
-        </div>
-    </div>
-    <p class="card-description">Hierarchical data structure where each node has at most two children,
-        maintaining the binary search property for efficient searching, insertion, and deletion.</p>
-    <div class="card-meta">
-        <div class="complexity">
-            <span class="complexity-badge time-complexity">
-                <i class="fas fa-clock"></i> O(log n)
-            </span>
-            <span class="complexity-badge space-complexity">
-                <i class="fas fa-memory"></i> O(n)
-            </span>
-        </div>
-        <button class="explore-btn" onclick="window.open('bst.html', '_self')">
-            Explore <i class="fas fa-arrow-right"></i>
-        </button>
-    </div>
-</div>
+
 
         <!-- Documentation Section -->
         <div id="documentation" class="documentation-section">
