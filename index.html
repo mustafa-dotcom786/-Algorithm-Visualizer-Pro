@@ -12,12 +12,15 @@ $user_email = $_SESSION['user_email'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Algorithm Visualizer Pro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary: #6366f1;
@@ -120,9 +123,19 @@ $user_email = $_SESSION['user_email'];
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            33% { transform: translateY(-20px) rotate(120deg); }
-            66% { transform: translateY(20px) rotate(240deg); }
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            33% {
+                transform: translateY(-20px) rotate(120deg);
+            }
+
+            66% {
+                transform: translateY(20px) rotate(240deg);
+            }
         }
 
         /* Modern Navbar */
@@ -147,6 +160,7 @@ $user_email = $_SESSION['user_email'];
                 transform: translateY(-100%);
                 opacity: 0;
             }
+
             to {
                 transform: translateY(0);
                 opacity: 1;
@@ -179,6 +193,7 @@ $user_email = $_SESSION['user_email'];
                 box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
                 transform: scale(1);
             }
+
             100% {
                 box-shadow: 0 4px 30px rgba(99, 102, 241, 0.6);
                 transform: scale(1.05);
@@ -226,17 +241,25 @@ $user_email = $_SESSION['user_email'];
             box-shadow: var(--shadow-sm);
             animation: subtleFloat 3s ease-in-out infinite;
         }
-        .user-avatar img{
+
+        .user-avatar img {
             width: 70px;
             border-radius: 60px;
             height: 63px;
-            
+
         }
 
 
         @keyframes subtleFloat {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
         }
 
         .user-details {
@@ -331,8 +354,13 @@ $user_email = $_SESSION['user_email'];
         }
 
         @keyframes shimmer {
-            0% { background-position: -200% center; }
-            100% { background-position: 200% center; }
+            0% {
+                background-position: -200% center;
+            }
+
+            100% {
+                background-position: 200% center;
+            }
         }
 
         .hero-title {
@@ -348,8 +376,13 @@ $user_email = $_SESSION['user_email'];
         }
 
         @keyframes gradientShift {
-            0% { background-position: 0% center; }
-            100% { background-position: 100% center; }
+            0% {
+                background-position: 0% center;
+            }
+
+            100% {
+                background-position: 100% center;
+            }
         }
 
         .hero-subtitle {
@@ -486,13 +519,33 @@ $user_email = $_SESSION['user_email'];
             }
         }
 
-        .algorithm-card:nth-child(1) { animation-delay: 0.1s; }
-        .algorithm-card:nth-child(2) { animation-delay: 0.2s; }
-        .algorithm-card:nth-child(3) { animation-delay: 0.3s; }
-        .algorithm-card:nth-child(4) { animation-delay: 0.4s; }
-        .algorithm-card:nth-child(5) { animation-delay: 0.5s; }
-        .algorithm-card:nth-child(6) { animation-delay: 0.6s; }
-        .algorithm-card:nth-child(7) { animation-delay: 0.7s; }
+        .algorithm-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .algorithm-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .algorithm-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .algorithm-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .algorithm-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .algorithm-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .algorithm-card:nth-child(7) {
+            animation-delay: 0.7s;
+        }
 
         .algorithm-card::before {
             content: '';
@@ -540,13 +593,33 @@ $user_email = $_SESSION['user_email'];
             transform: rotate(10deg) scale(1.1);
         }
 
-        .bubble-sort { background: var(--gradient-primary); }
-        .insertion-sort { background: var(--gradient-success); }
-        .selection-sort { background: var(--gradient-warning); }
-        .linear-search { background: var(--gradient-info); }
-        .binary-search { background: var(--gradient-purple); }
-        .linked-list { background: var(--gradient-pink); }
-        .queue { background: var(--gradient-queue); }
+        .bubble-sort {
+            background: var(--gradient-primary);
+        }
+
+        .insertion-sort {
+            background: var(--gradient-success);
+        }
+
+        .selection-sort {
+            background: var(--gradient-warning);
+        }
+
+        .linear-search {
+            background: var(--gradient-info);
+        }
+
+        .binary-search {
+            background: var(--gradient-purple);
+        }
+
+        .linked-list {
+            background: var(--gradient-pink);
+        }
+
+        .queue {
+            background: var(--gradient-queue);
+        }
 
         .card-title {
             flex: 1;
@@ -603,8 +676,13 @@ $user_email = $_SESSION['user_email'];
             border: 1px solid var(--glass-border);
         }
 
-        .time-complexity { color: var(--primary); }
-        .space-complexity { color: var(--info); }
+        .time-complexity {
+            color: var(--primary);
+        }
+
+        .space-complexity {
+            color: var(--info);
+        }
 
         .explore-btn {
             background: transparent;
@@ -767,8 +845,13 @@ $user_email = $_SESSION['user_email'];
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         /* Enhanced Code Display */
@@ -787,6 +870,7 @@ $user_email = $_SESSION['user_email'];
                 opacity: 0;
                 transform: translateX(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0);
@@ -880,15 +964,42 @@ $user_email = $_SESSION['user_email'];
             tab-size: 4;
         }
 
-        .code-keyword { color: #bb9af7; }
-        .code-type { color: #7dcfff; }
-        .code-string { color: #9ece6a; }
-        .code-comment { color: #565f89; font-style: italic; }
-        .code-number { color: #ff9e64; }
-        .code-function { color: #7aa2f7; }
-        .code-operator { color: #89ddff; }
-        .code-macro { color: #ff9e64; }
-        .code-class { color: #e0af68; }
+        .code-keyword {
+            color: #bb9af7;
+        }
+
+        .code-type {
+            color: #7dcfff;
+        }
+
+        .code-string {
+            color: #9ece6a;
+        }
+
+        .code-comment {
+            color: #565f89;
+            font-style: italic;
+        }
+
+        .code-number {
+            color: #ff9e64;
+        }
+
+        .code-function {
+            color: #7aa2f7;
+        }
+
+        .code-operator {
+            color: #89ddff;
+        }
+
+        .code-macro {
+            color: #ff9e64;
+        }
+
+        .code-class {
+            color: #e0af68;
+        }
 
         /* Algorithm Steps */
         .algorithm-steps {
@@ -1006,10 +1117,21 @@ $user_email = $_SESSION['user_email'];
             margin-bottom: 0.5rem;
         }
 
-        .chart-value.best { color: var(--success); }
-        .chart-value.average { color: var(--warning); }
-        .chart-value.worst { color: var(--danger); }
-        .chart-value.space { color: var(--info); }
+        .chart-value.best {
+            color: var(--success);
+        }
+
+        .chart-value.average {
+            color: var(--warning);
+        }
+
+        .chart-value.worst {
+            color: var(--danger);
+        }
+
+        .chart-value.space {
+            color: var(--info);
+        }
 
         .chart-description {
             font-size: 0.85rem;
@@ -1341,6 +1463,7 @@ $user_email = $_SESSION['user_email'];
                 opacity: 0;
                 transform: translateY(50px) scale(0.5);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0) scale(1);
@@ -1374,8 +1497,13 @@ $user_email = $_SESSION['user_email'];
         }
 
         @keyframes pulse {
-            from { box-shadow: 0 0 20px rgba(245, 158, 11, 0.4); }
-            to { box-shadow: 0 0 30px rgba(245, 158, 11, 0.6); }
+            from {
+                box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+            }
+
+            to {
+                box-shadow: 0 0 30px rgba(245, 158, 11, 0.6);
+            }
         }
 
         .array-element.swapping {
@@ -1386,9 +1514,19 @@ $user_email = $_SESSION['user_email'];
         }
 
         @keyframes shake {
-            0%, 100% { transform: translateX(0) scale(1.1); }
-            25% { transform: translateX(-5px) scale(1.1); }
-            75% { transform: translateX(5px) scale(1.1); }
+
+            0%,
+            100% {
+                transform: translateX(0) scale(1.1);
+            }
+
+            25% {
+                transform: translateX(-5px) scale(1.1);
+            }
+
+            75% {
+                transform: translateX(5px) scale(1.1);
+            }
         }
 
         .array-element.sorted {
@@ -1403,8 +1541,15 @@ $user_email = $_SESSION['user_email'];
         }
 
         @keyframes foundGlow {
-            0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); }
-            50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.8); }
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(59, 130, 246, 0.8);
+            }
         }
 
         .array-element.current {
@@ -1415,8 +1560,13 @@ $user_email = $_SESSION['user_email'];
         }
 
         @keyframes glow {
-            from { box-shadow: 0 0 15px rgba(168, 85, 247, 0.4); }
-            to { box-shadow: 0 0 25px rgba(168, 85, 247, 0.7); }
+            from {
+                box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+            }
+
+            to {
+                box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
+            }
         }
 
         .array-element.search-area {
@@ -1425,11 +1575,12 @@ $user_email = $_SESSION['user_email'];
         }
 
         @keyframes searchAreaPulse {
-            from { 
+            from {
                 box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
                 opacity: 0.8;
             }
-            to { 
+
+            to {
                 box-shadow: 0 0 25px rgba(245, 158, 11, 0.6);
                 opacity: 1;
             }
@@ -1497,6 +1648,7 @@ $user_email = $_SESSION['user_email'];
                 opacity: 0;
                 transform: translateY(-20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1521,6 +1673,7 @@ $user_email = $_SESSION['user_email'];
                 opacity: 0;
                 transform: scale(0.8) rotate(-180deg);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1) rotate(0);
@@ -1588,8 +1741,17 @@ $user_email = $_SESSION['user_email'];
         }
 
         @keyframes arrowPulse {
-            0%, 100% { transform: translateX(0); opacity: 1; }
-            50% { transform: translateX(3px); opacity: 0.7; }
+
+            0%,
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            50% {
+                transform: translateX(3px);
+                opacity: 0.7;
+            }
         }
 
         .linked-list-arrow.traversing {
@@ -1598,8 +1760,15 @@ $user_email = $_SESSION['user_email'];
         }
 
         @keyframes traversingArrow {
-            0% { transform: scale(1); color: var(--warning); }
-            100% { transform: scale(1.2); color: var(--danger); }
+            0% {
+                transform: scale(1);
+                color: var(--warning);
+            }
+
+            100% {
+                transform: scale(1.2);
+                color: var(--danger);
+            }
         }
 
         .linked-list-node.traversing {
@@ -1610,8 +1779,15 @@ $user_email = $_SESSION['user_email'];
         }
 
         @keyframes traverseNode {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
         }
 
         .linked-list-node.inserting {
@@ -1625,10 +1801,12 @@ $user_email = $_SESSION['user_email'];
                 opacity: 0;
                 transform: scale(0) rotate(-180deg);
             }
+
             50% {
                 opacity: 0.5;
                 transform: scale(1.1) rotate(-90deg);
             }
+
             100% {
                 opacity: 1;
                 transform: scale(1) rotate(0);
@@ -1646,10 +1824,12 @@ $user_email = $_SESSION['user_email'];
                 opacity: 1;
                 transform: scale(1) rotate(0);
             }
+
             50% {
                 opacity: 0.5;
                 transform: scale(1.1) rotate(90deg);
             }
+
             100% {
                 opacity: 0;
                 transform: scale(0) rotate(180deg);
@@ -1663,8 +1843,13 @@ $user_email = $_SESSION['user_email'];
         }
 
         @keyframes highlightNode {
-            from { transform: scale(1); }
-            to { transform: scale(1.05); }
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.05);
+            }
         }
 
         .new-node {
@@ -1685,10 +1870,12 @@ $user_email = $_SESSION['user_email'];
                 opacity: 0;
                 transform: translate(0, 0) scale(0);
             }
+
             50% {
                 opacity: 1;
                 transform: translate(80px, -40px) scale(1.1);
             }
+
             100% {
                 opacity: 0;
                 transform: translate(160px, 0) scale(0);
@@ -1732,6 +1919,7 @@ $user_email = $_SESSION['user_email'];
                 opacity: 0;
                 transform: translateY(20px) scale(0.8);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0) scale(1);
@@ -1756,7 +1944,8 @@ $user_email = $_SESSION['user_email'];
             font-weight: 500;
         }
 
-        .front-pointer, .rear-pointer {
+        .front-pointer,
+        .rear-pointer {
             position: absolute;
             background: var(--gradient-warning);
             color: white;
@@ -1788,10 +1977,12 @@ $user_email = $_SESSION['user_email'];
                 opacity: 0;
                 transform: translateY(-20px) scale(0.8);
             }
+
             50% {
                 opacity: 1;
                 transform: translateY(0) scale(1.1);
             }
+
             100% {
                 opacity: 1;
                 transform: translateY(0) scale(1);
@@ -1809,10 +2000,12 @@ $user_email = $_SESSION['user_email'];
                 opacity: 1;
                 transform: translateY(0) scale(1);
             }
+
             50% {
                 opacity: 0.5;
                 transform: translateY(-20px) scale(1.1);
             }
+
             100% {
                 opacity: 0;
                 transform: translateY(-40px) scale(0.8);
@@ -1847,9 +2040,17 @@ $user_email = $_SESSION['user_email'];
             margin-bottom: 0.5rem;
         }
 
-        .front-value { color: var(--success); }
-        .rear-value { color: var(--warning); }
-        .size-value { color: var(--info); }
+        .front-value {
+            color: var(--success);
+        }
+
+        .rear-value {
+            color: var(--warning);
+        }
+
+        .size-value {
+            color: var(--info);
+        }
 
         .info-label {
             font-size: 0.9rem;
@@ -1868,8 +2069,13 @@ $user_email = $_SESSION['user_email'];
         }
 
         @keyframes drawPath {
-            from { transform: scaleX(0); }
-            to { transform: scaleX(1); }
+            from {
+                transform: scaleX(0);
+            }
+
+            to {
+                transform: scaleX(1);
+            }
         }
 
         /* Search Pointers */
@@ -1905,6 +2111,7 @@ $user_email = $_SESSION['user_email'];
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -1962,12 +2169,29 @@ $user_email = $_SESSION['user_email'];
             margin-bottom: 0.5rem;
         }
 
-        .comparison-count { color: var(--primary); }
-        .swap-count { color: var(--danger); }
-        .operations-count { color: var(--warning); }
-        .time-taken { color: var(--success); }
-        .found-index { color: var(--info); }
-        .array-size { color: var(--purple); }
+        .comparison-count {
+            color: var(--primary);
+        }
+
+        .swap-count {
+            color: var(--danger);
+        }
+
+        .operations-count {
+            color: var(--warning);
+        }
+
+        .time-taken {
+            color: var(--success);
+        }
+
+        .found-index {
+            color: var(--info);
+        }
+
+        .array-size {
+            color: var(--purple);
+        }
 
         .info-label {
             font-size: 0.9rem;
@@ -2150,9 +2374,11 @@ $user_email = $_SESSION['user_email'];
                 opacity: 0;
                 transform: scale(0.3) rotate(-180deg);
             }
+
             50% {
                 transform: scale(1.1) rotate(0);
             }
+
             100% {
                 opacity: 1;
                 transform: scale(1) rotate(0);
@@ -2197,6 +2423,7 @@ $user_email = $_SESSION['user_email'];
                 opacity: 0;
                 transform: translateX(-30px) scale(0.9);
             }
+
             to {
                 opacity: 1;
                 transform: translateX(0) scale(1);
@@ -2288,7 +2515,9 @@ $user_email = $_SESSION['user_email'];
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* Responsive Design */
@@ -2296,7 +2525,7 @@ $user_email = $_SESSION['user_email'];
             .container {
                 padding: 1.5rem;
             }
-            
+
             .algorithms-grid {
                 grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             }
@@ -2306,48 +2535,51 @@ $user_email = $_SESSION['user_email'];
             .container {
                 padding: 1rem;
             }
-            
+
             .navbar {
                 flex-direction: column;
                 gap: 1rem;
                 text-align: center;
                 padding: 1rem;
             }
-            
+
             .user-info {
                 flex-direction: column;
                 gap: 1rem;
             }
-            
+
             .hero-title {
                 font-size: 2rem;
             }
-            
+
             .hero-subtitle {
                 font-size: 1rem;
             }
-            
+
             .algorithms-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .categories, .functionality-nav {
+
+            .categories,
+            .functionality-nav {
                 justify-content: center;
             }
-            
-            .doc-header, .doc-nav, .doc-content {
+
+            .doc-header,
+            .doc-nav,
+            .doc-content {
                 padding: 1rem;
             }
-            
+
             .controls-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .footer-content {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            
+
             .social-links {
                 justify-content: center;
             }
@@ -2357,26 +2589,27 @@ $user_email = $_SESSION['user_email'];
             .hero-title {
                 font-size: 1.8rem;
             }
-            
-            .category-btn, .func-btn {
+
+            .category-btn,
+            .func-btn {
                 padding: 10px 16px;
                 font-size: 0.9rem;
             }
-            
+
             .control-btn {
                 padding: 10px 16px;
                 font-size: 0.9rem;
             }
-            
+
             .array-element {
                 width: 40px;
             }
-            
+
             .linked-list-node {
                 min-width: 100px;
                 padding: 0.6rem;
             }
-            
+
             .queue-element {
                 min-width: 60px;
                 min-height: 60px;
@@ -2384,6 +2617,7 @@ $user_email = $_SESSION['user_email'];
         }
     </style>
 </head>
+
 <body>
     <!-- Animated Background -->
     <div class="animated-bg">
@@ -2408,8 +2642,12 @@ $user_email = $_SESSION['user_email'];
                 <img src="avatar.png" alt="">
             </div>
             <div class="user-details">
-                <div class="user-name"><?php echo htmlspecialchars($user_name); ?></div>
-                <div class="user-email"><?php echo htmlspecialchars($user_email); ?></div>
+                <div class="user-name">
+                    <?php echo htmlspecialchars($user_name); ?>
+                </div>
+                <div class="user-email">
+                    <?php echo htmlspecialchars($user_email); ?>
+                </div>
             </div>
             <button class="logout-btn" onclick="logout()">
                 <i class="fas fa-sign-out-alt"></i> Logout
@@ -2422,7 +2660,8 @@ $user_email = $_SESSION['user_email'];
         <!-- Hero Section -->
         <div class="hero-section">
             <h1 class="hero-title">Visualize Algorithms in Action</h1>
-            <p class="hero-subtitle">Master complex algorithms through beautiful, interactive visualizations with real-time animations and detailed C++ implementations</p>
+            <p class="hero-subtitle">Master complex algorithms through beautiful, interactive visualizations with
+                real-time animations and detailed C++ implementations</p>
             <div class="hero-stats">
                 <div class="stat-item">
                     <div class="stat-value">7</div>
@@ -2456,6 +2695,9 @@ $user_email = $_SESSION['user_email'];
             <button class="category-btn" onclick="filterAlgorithms('queue')">
                 <i class="fas fa-stream"></i> Queue
             </button>
+            <button class="category-btn" onclick="filterAlgorithms('tree')">
+                <i class="fas fa-project-diagram"></i> Tree Structures
+            </button>
         </div>
 
         <!-- Algorithms Grid -->
@@ -2471,7 +2713,8 @@ $user_email = $_SESSION['user_email'];
                         <span class="card-badge">Sorting</span>
                     </div>
                 </div>
-                <p class="card-description">Simple comparison-based sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.</p>
+                <p class="card-description">Simple comparison-based sorting algorithm that repeatedly steps through the
+                    list, compares adjacent elements and swaps them if they are in the wrong order.</p>
                 <div class="card-meta">
                     <div class="complexity">
                         <span class="complexity-badge time-complexity">
@@ -2498,7 +2741,8 @@ $user_email = $_SESSION['user_email'];
                         <span class="card-badge">Sorting</span>
                     </div>
                 </div>
-                <p class="card-description">Builds the final sorted array one item at a time by inserting elements in their correct position within the sorted portion of the array.</p>
+                <p class="card-description">Builds the final sorted array one item at a time by inserting elements in
+                    their correct position within the sorted portion of the array.</p>
                 <div class="card-meta">
                     <div class="complexity">
                         <span class="complexity-badge time-complexity">
@@ -2525,7 +2769,8 @@ $user_email = $_SESSION['user_email'];
                         <span class="card-badge">Sorting</span>
                     </div>
                 </div>
-                <p class="card-description">Divides the input into sorted and unsorted regions, repeatedly selects the smallest element from unsorted region and moves it to sorted region.</p>
+                <p class="card-description">Divides the input into sorted and unsorted regions, repeatedly selects the
+                    smallest element from unsorted region and moves it to sorted region.</p>
                 <div class="card-meta">
                     <div class="complexity">
                         <span class="complexity-badge time-complexity">
@@ -2552,7 +2797,8 @@ $user_email = $_SESSION['user_email'];
                         <span class="card-badge">Searching</span>
                     </div>
                 </div>
-                <p class="card-description">Sequentially checks each element of the list until a match is found or the entire list has been searched. Simple but inefficient for large lists.</p>
+                <p class="card-description">Sequentially checks each element of the list until a match is found or the
+                    entire list has been searched. Simple but inefficient for large lists.</p>
                 <div class="card-meta">
                     <div class="complexity">
                         <span class="complexity-badge time-complexity">
@@ -2579,7 +2825,8 @@ $user_email = $_SESSION['user_email'];
                         <span class="card-badge">Searching</span>
                     </div>
                 </div>
-                <p class="card-description">Efficient search algorithm that finds the position of a target value within a sorted array by repeatedly dividing the search interval in half.</p>
+                <p class="card-description">Efficient search algorithm that finds the position of a target value within
+                    a sorted array by repeatedly dividing the search interval in half.</p>
                 <div class="card-meta">
                     <div class="complexity">
                         <span class="complexity-badge time-complexity">
@@ -2606,7 +2853,8 @@ $user_email = $_SESSION['user_email'];
                         <span class="card-badge">Data Structure</span>
                     </div>
                 </div>
-                <p class="card-description">Linear data structure where elements are linked using pointers. Supports efficient insertion and deletion at any position.</p>
+                <p class="card-description">Linear data structure where elements are linked using pointers. Supports
+                    efficient insertion and deletion at any position.</p>
                 <div class="card-meta">
                     <div class="complexity">
                         <span class="complexity-badge time-complexity">
@@ -2633,7 +2881,8 @@ $user_email = $_SESSION['user_email'];
                         <span class="card-badge">Data Structure</span>
                     </div>
                 </div>
-                <p class="card-description">FIFO (First In First Out) data structure. Elements are added at rear and removed from front. Supports enqueue, dequeue operations.</p>
+                <p class="card-description">FIFO (First In First Out) data structure. Elements are added at rear and
+                    removed from front. Supports enqueue, dequeue operations.</p>
                 <div class="card-meta">
                     <div class="complexity">
                         <span class="complexity-badge time-complexity">
@@ -2649,6 +2898,35 @@ $user_email = $_SESSION['user_email'];
                 </div>
             </div>
         </div>
+
+        <!-- Binary Search Tree -->
+        <!-- Binary Search Tree -->
+<div class="algorithm-card" data-category="tree" onclick="window.open('bst.html', '_self')">
+    <div class="card-header">
+        <div class="card-icon" style="background: var(--gradient-success);">
+            <i class="fas fa-project-diagram"></i>
+        </div>
+        <div class="card-title">
+            <h3>Binary Search Tree</h3>
+            <span class="card-badge">Data Structure</span>
+        </div>
+    </div>
+    <p class="card-description">Hierarchical data structure where each node has at most two children,
+        maintaining the binary search property for efficient searching, insertion, and deletion.</p>
+    <div class="card-meta">
+        <div class="complexity">
+            <span class="complexity-badge time-complexity">
+                <i class="fas fa-clock"></i> O(log n)
+            </span>
+            <span class="complexity-badge space-complexity">
+                <i class="fas fa-memory"></i> O(n)
+            </span>
+        </div>
+        <button class="explore-btn" onclick="window.open('bst.html', '_self')">
+            Explore <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+</div>
 
         <!-- Documentation Section -->
         <div id="documentation" class="documentation-section">
@@ -2666,27 +2944,28 @@ $user_email = $_SESSION['user_email'];
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            
+
             <div class="doc-nav" id="docNav"></div>
-            
+
             <div class="doc-content">
                 <div id="docSections"></div>
-                
+
                 <!-- Visualization Section -->
                 <div class="visualization-section" id="visualizationSection">
                     <div class="vis-header">
                         <h3><i class="fas fa-play-circle"></i> Interactive Visualization</h3>
-                        <p>Visualize the algorithm in action with real-time animations. Adjust parameters and watch how the algorithm processes data step by step.</p>
+                        <p>Visualize the algorithm in action with real-time animations. Adjust parameters and watch how
+                            the algorithm processes data step by step.</p>
                     </div>
-                    
+
                     <div class="functionality-nav" id="functionalityNav"></div>
-                    
+
                     <div class="controls-section">
                         <div class="controls-grid" id="controlsGrid"></div>
                     </div>
-                    
+
                     <div class="visualization-area" id="visualizationArea"></div>
-                    
+
                     <div class="info-panel">
                         <div class="info-grid" id="infoGrid"></div>
                     </div>
@@ -2708,7 +2987,8 @@ $user_email = $_SESSION['user_email'];
                     </div>
                 </a>
                 <p class="footer-description">
-                    Interactive platform for learning and visualizing algorithms with beautiful animations and detailed implementations.
+                    Interactive platform for learning and visualizing algorithms with beautiful animations and detailed
+                    implementations.
                 </p>
                 <div class="social-links">
                     <a href="#" class="social-icon">
@@ -2725,7 +3005,7 @@ $user_email = $_SESSION['user_email'];
                     </a>
                 </div>
             </div>
-            
+
             <div class="footer-section">
                 <h4 class="footer-title">Categories</h4>
                 <ul class="footer-links">
@@ -2736,7 +3016,7 @@ $user_email = $_SESSION['user_email'];
                     <li><a href="#"><i class="fas fa-project-diagram"></i> Graph Algorithms</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
                 <h4 class="footer-title">Resources</h4>
                 <ul class="footer-links">
@@ -2747,7 +3027,7 @@ $user_email = $_SESSION['user_email'];
                     <li><a href="#"><i class="fas fa-question-circle"></i> Help Center</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
                 <h4 class="footer-title">Contact</h4>
                 <ul class="footer-links">
@@ -2759,7 +3039,7 @@ $user_email = $_SESSION['user_email'];
                 </ul>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <p class="copyright">© 2024 Algorithm Visualizer Pro. All rights reserved.</p>
             <div class="footer-bottom-links">
@@ -4218,7 +4498,7 @@ using namespace std;
         };
 
         // Initialize the application
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             initializeApp();
             setupEventListeners();
             setupScrollTop();
@@ -4227,7 +4507,7 @@ using namespace std;
         function initializeApp() {
             // Initialize node addresses for linked list
             initializeNodeAddresses();
-            
+
             // Set initial algorithm
             showDocumentation('bubble');
         }
@@ -4251,11 +4531,11 @@ using namespace std;
         function filterAlgorithms(category) {
             const cards = document.querySelectorAll('.algorithm-card');
             const buttons = document.querySelectorAll('.category-btn');
-            
+
             // Update active button
             buttons.forEach(btn => btn.classList.remove('active'));
             event.currentTarget.classList.add('active');
-            
+
             // Filter cards
             cards.forEach(card => {
                 if (category === 'all' || card.dataset.category === category) {
@@ -4278,28 +4558,28 @@ using namespace std;
             currentAlgorithm = algo;
             const doc = documentation[algo];
             const docSection = document.getElementById('documentation');
-            
+
             // Update documentation title
             document.getElementById('docTitleText').textContent = doc.title;
             document.getElementById('docSubtitle').textContent = doc.subtitle;
             document.getElementById('docIcon').innerHTML = `<i class="${doc.icon}"></i>`;
             document.getElementById('docIcon').style.background = `linear-gradient(135deg, ${doc.color}, ${darkenColor(doc.color)})`;
-            
+
             // Build navigation
             buildDocNavigation(doc);
-            
+
             // Show first section
             showDocSection(Object.keys(doc.sections)[0]);
-            
+
             // Build functionality navigation
             buildFunctionalityNavigation(doc);
-            
+
             // Show visualization section
             showFunctionality(doc.functionalities[0]);
-            
+
             // Show documentation
             docSection.classList.add('active');
-            
+
             // Scroll to documentation
             setTimeout(() => {
                 docSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -4309,7 +4589,7 @@ using namespace std;
         function buildDocNavigation(doc) {
             const docNav = document.getElementById('docNav');
             docNav.innerHTML = '';
-            
+
             Object.keys(doc.sections).forEach((sectionKey, index) => {
                 const section = doc.sections[sectionKey];
                 const button = document.createElement('button');
@@ -4323,7 +4603,7 @@ using namespace std;
         function buildFunctionalityNavigation(doc) {
             const funcNav = document.getElementById('functionalityNav');
             funcNav.innerHTML = '';
-            
+
             doc.functionalities.forEach((func, index) => {
                 const button = document.createElement('button');
                 button.className = `func-btn ${index === 0 ? 'active' : ''}`;
@@ -4363,29 +4643,29 @@ using namespace std;
             const doc = documentation[currentAlgorithm];
             const docSections = document.getElementById('docSections');
             const buttons = document.querySelectorAll('.doc-nav-btn');
-            
+
             // Update active button
             buttons.forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
-            
+
             // Show section content
             docSections.innerHTML = `
                 <div class="doc-section active">
                     ${doc.sections[sectionKey].content}
                 </div>
             `;
-            
+
             // Apply syntax highlighting
             setTimeout(applySyntaxHighlighting, 100);
         }
 
         function showFunctionality(func) {
             currentFunctionality = func;
-            
+
             // Update active functionality button
             document.querySelectorAll('.func-btn').forEach(btn => btn.classList.remove('active'));
             event.currentTarget.classList.add('active');
-            
+
             // Initialize data based on algorithm
             if (currentAlgorithm === 'linkedlist') {
                 initializeNodeAddresses();
@@ -4400,21 +4680,21 @@ using namespace std;
                     updateGraphVisualization();
                 }
             }
-            
+
             // Reset metrics
             resetMetrics();
             updateInfoPanel();
-            
+
             // Build controls
             buildControls(func);
-            
+
             // Build visualization
             buildVisualization(func);
         }
 
         function buildControls(func) {
             const controlsGrid = document.getElementById('controlsGrid');
-            
+
             if (currentAlgorithm === 'linkedlist') {
                 if (func === 'insert') {
                     controlsGrid.innerHTML = `
@@ -4651,7 +4931,7 @@ using namespace std;
 
         function buildVisualization(func) {
             const visualizationArea = document.getElementById('visualizationArea');
-            
+
             if (currentAlgorithm === 'linkedlist') {
                 visualizationArea.innerHTML = `
                     <div class="head-pointer" id="headPointer">
@@ -4699,10 +4979,10 @@ using namespace std;
         function updateGraphVisualization() {
             const container = document.getElementById('graphContainer');
             if (!container) return;
-            
+
             container.innerHTML = '';
             const maxValue = Math.max(...currentArray);
-            
+
             currentArray.forEach((value, index) => {
                 const element = document.createElement('div');
                 element.className = 'array-element';
@@ -4720,9 +5000,9 @@ using namespace std;
         function updateArrayVisualization() {
             const container = document.getElementById('arrayContainer');
             if (!container) return;
-            
+
             container.innerHTML = '';
-            
+
             currentArray.forEach((value, index) => {
                 const element = document.createElement('div');
                 element.className = 'array-element';
@@ -4740,14 +5020,14 @@ using namespace std;
         function updateLinkedListVisualization() {
             const container = document.getElementById('linkedListContainer');
             if (!container) return;
-            
+
             container.innerHTML = '';
-            
+
             if (linkedList.length === 0) {
                 container.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--text-light);">Empty Linked List</div>';
                 return;
             }
-            
+
             linkedList.forEach((value, index) => {
                 const node = document.createElement('div');
                 node.className = 'linked-list-node';
@@ -4766,7 +5046,7 @@ using namespace std;
                 node.dataset.index = index;
                 node.dataset.address = nodeAddresses.get(index);
                 container.appendChild(node);
-                
+
                 // Add arrow if not last node
                 if (index < linkedList.length - 1) {
                     const arrow = document.createElement('div');
@@ -4782,15 +5062,15 @@ using namespace std;
         function updateQueueVisualization() {
             const container = document.getElementById('queueVisualization');
             if (!container) return;
-            
+
             container.innerHTML = '';
-            
+
             if (queue.length === 0) {
                 container.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--text-light);">Empty Queue</div>';
                 updateQueueInfo();
                 return;
             }
-            
+
             // Add front pointer
             if (queue.length > 0) {
                 const frontPointer = document.createElement('div');
@@ -4799,7 +5079,7 @@ using namespace std;
                 frontPointer.style.left = '50px';
                 container.appendChild(frontPointer);
             }
-            
+
             // Add rear pointer
             if (queue.length > 0) {
                 const rearPointer = document.createElement('div');
@@ -4808,7 +5088,7 @@ using namespace std;
                 rearPointer.style.right = '50px';
                 container.appendChild(rearPointer);
             }
-            
+
             // Add queue elements
             queue.forEach((value, index) => {
                 const element = document.createElement('div');
@@ -4821,14 +5101,14 @@ using namespace std;
                 element.dataset.value = value;
                 container.appendChild(element);
             });
-            
+
             updateQueueInfo();
         }
 
         function updateQueueInfo() {
             const queueInfo = document.getElementById('queueInfo');
             if (!queueInfo) return;
-            
+
             queueInfo.innerHTML = `
                 <div class="info-item">
                     <div class="info-value front-value">${queue.length > 0 ? queue[0] : 'Empty'}</div>
@@ -4852,7 +5132,7 @@ using namespace std;
         function updateInfoPanel() {
             const infoGrid = document.getElementById('infoGrid');
             const doc = documentation[currentAlgorithm];
-            
+
             let infoHTML = `
                 <div class="info-card">
                     <div class="info-icon">
@@ -4878,7 +5158,7 @@ using namespace std;
                     <div class="info-label">Time Taken</div>
                 </div>
             `;
-            
+
             if (currentAlgorithm === 'linkedlist') {
                 if (currentFunctionality === 'traverse') {
                     infoHTML += `
@@ -4946,7 +5226,7 @@ using namespace std;
                     </div>
                 `;
             }
-            
+
             infoGrid.innerHTML = infoHTML;
         }
 
@@ -4954,18 +5234,18 @@ using namespace std;
         async function enqueueAtFront() {
             if (visualizationRunning) return;
             visualizationRunning = true;
-            
+
             const value = parseInt(document.getElementById('queueValue').value) || 60;
-            
+
             // Add to front of queue
             queue.unshift(value);
             metrics.enqueueCount++;
             metrics.operations++;
             updateInfoPanel();
-            
+
             // Update visualization
             updateQueueVisualization();
-            
+
             // Highlight new element
             const elements = document.querySelectorAll('.queue-element');
             if (elements[0]) {
@@ -4973,7 +5253,7 @@ using namespace std;
                 await sleep(1000);
                 elements[0].classList.remove('enqueuing');
             }
-            
+
             showToast(`Enqueued ${value} at front`, 'success');
             visualizationRunning = false;
         }
@@ -4981,18 +5261,18 @@ using namespace std;
         async function enqueueAtRear() {
             if (visualizationRunning) return;
             visualizationRunning = true;
-            
+
             const value = parseInt(document.getElementById('queueValue').value) || 60;
-            
+
             // Add to rear of queue
             queue.push(value);
             metrics.enqueueCount++;
             metrics.operations++;
             updateInfoPanel();
-            
+
             // Update visualization
             updateQueueVisualization();
-            
+
             // Highlight new element
             const elements = document.querySelectorAll('.queue-element');
             if (elements[elements.length - 1]) {
@@ -5000,7 +5280,7 @@ using namespace std;
                 await sleep(1000);
                 elements[elements.length - 1].classList.remove('enqueuing');
             }
-            
+
             showToast(`Enqueued ${value} at rear`, 'success');
             visualizationRunning = false;
         }
@@ -5011,12 +5291,12 @@ using namespace std;
                 showToast('Queue is empty!', 'error');
                 return;
             }
-            
+
             visualizationRunning = true;
-            
+
             const position = document.getElementById('dequeuePosition')?.value || 'front';
             let removedValue;
-            
+
             if (position === 'front') {
                 // Remove from front (FIFO)
                 removedValue = queue.shift();
@@ -5028,14 +5308,14 @@ using namespace std;
                 const middleIndex = Math.floor(queue.length / 2);
                 removedValue = queue.splice(middleIndex, 1)[0];
             }
-            
+
             metrics.dequeueCount++;
             metrics.operations++;
             updateInfoPanel();
-            
+
             // Update visualization
             updateQueueVisualization();
-            
+
             showToast(`Dequeued ${removedValue} from ${position}`, 'warning');
             visualizationRunning = false;
         }
@@ -5046,18 +5326,18 @@ using namespace std;
                 showToast('Queue is empty!', 'error');
                 return;
             }
-            
+
             visualizationRunning = true;
-            
+
             // Remove from rear
             const removedValue = queue.pop();
             metrics.dequeueCount++;
             metrics.operations++;
             updateInfoPanel();
-            
+
             // Update visualization
             updateQueueVisualization();
-            
+
             showToast(`Dequeued ${removedValue} from rear`, 'warning');
             visualizationRunning = false;
         }
@@ -5078,17 +5358,17 @@ using namespace std;
         async function startInsertion() {
             if (visualizationRunning) return;
             visualizationRunning = true;
-            
+
             const positionSelect = document.getElementById('insertPosition');
             const nodeValue = parseInt(document.getElementById('nodeValue').value) || 50;
             const position = positionSelect.value;
-            
+
             metrics.operations++;
             updateInfoPanel();
-            
+
             // Show new node animation
             await showNewNodeAnimation(nodeValue);
-            
+
             if (position === '0') {
                 await insertAtBeginning(nodeValue);
             } else if (position === 'end') {
@@ -5096,7 +5376,7 @@ using namespace std;
             } else if (position === 'middle') {
                 await insertAtMiddle(nodeValue);
             }
-            
+
             visualizationRunning = false;
         }
 
@@ -5108,7 +5388,7 @@ using namespace std;
             newNode.style.top = '100px';
             newNode.style.left = '50px';
             document.body.appendChild(newNode);
-            
+
             await sleep(2000);
             newNode.remove();
         }
@@ -5119,19 +5399,19 @@ using namespace std;
             traversingPointer.style.display = 'block';
             traversingPointer.style.left = '30px';
             traversingPointer.style.top = '-30px';
-            
+
             await sleep(speed);
-            
+
             // Insert at beginning
             linkedList.unshift(value);
             nodeAddresses = new Map();
             initializeNodeAddresses();
-            
+
             // Show insertion animation
             showToast(`Inserted ${value} at beginning`, 'success');
             updateLinkedListVisualization();
             updateInfoPanel();
-            
+
             // Highlight new node
             const firstNode = document.querySelector('.linked-list-node');
             if (firstNode) {
@@ -5139,7 +5419,7 @@ using namespace std;
                 await sleep(1000);
                 firstNode.classList.remove('inserting');
             }
-            
+
             traversingPointer.style.display = 'none';
         }
 
@@ -5148,51 +5428,51 @@ using namespace std;
                 await insertAtBeginning(value);
                 return;
             }
-            
+
             const traversingPointer = document.getElementById('traversingPointer');
             traversingPointer.style.display = 'block';
-            
+
             // Start from head
             traversingPointer.style.left = '30px';
             traversingPointer.style.top = '-30px';
-            
+
             const nodes = document.querySelectorAll('.linked-list-node');
             const arrows = document.querySelectorAll('.linked-list-arrow');
-            
+
             // Traverse to the end
             for (let i = 0; i < nodes.length; i++) {
                 if (!visualizationRunning) break;
-                
+
                 // Move traversing pointer
                 const nodeRect = nodes[i].getBoundingClientRect();
                 traversingPointer.style.left = (nodeRect.left + nodeRect.width / 2 - 30) + 'px';
-                
+
                 // Highlight current node
                 nodes[i].classList.add('traversing');
                 if (i < arrows.length) {
                     arrows[i].classList.add('traversing');
                 }
-                
+
                 metrics.traversalSteps++;
                 updateInfoPanel();
-                
+
                 await sleep(speed);
-                
+
                 nodes[i].classList.remove('traversing');
                 if (i < arrows.length) {
                     arrows[i].classList.remove('traversing');
                 }
-                
+
                 if (i === nodes.length - 1) {
                     // Insert at end
                     linkedList.push(value);
                     nodeAddresses = new Map();
                     initializeNodeAddresses();
-                    
+
                     showToast(`Inserted ${value} at end`, 'success');
                     updateLinkedListVisualization();
                     updateInfoPanel();
-                    
+
                     // Highlight new node
                     const newNodes = document.querySelectorAll('.linked-list-node');
                     newNodes[newNodes.length - 1].classList.add('inserting');
@@ -5200,7 +5480,7 @@ using namespace std;
                     newNodes[newNodes.length - 1].classList.remove('inserting');
                 }
             }
-            
+
             traversingPointer.style.display = 'none';
         }
 
@@ -5209,53 +5489,53 @@ using namespace std;
                 await insertAtEnd(value);
                 return;
             }
-            
+
             const middleIndex = Math.floor(linkedList.length / 2);
             const traversingPointer = document.getElementById('traversingPointer');
             traversingPointer.style.display = 'block';
-            
+
             // Start from head
             traversingPointer.style.left = '30px';
             traversingPointer.style.top = '-30px';
-            
+
             const nodes = document.querySelectorAll('.linked-list-node');
             const arrows = document.querySelectorAll('.linked-list-arrow');
-            
+
             // Traverse to middle
             for (let i = 0; i <= middleIndex; i++) {
                 if (!visualizationRunning) break;
-                
+
                 // Move traversing pointer
                 if (nodes[i]) {
                     const nodeRect = nodes[i].getBoundingClientRect();
                     traversingPointer.style.left = (nodeRect.left + nodeRect.width / 2 - 30) + 'px';
-                    
+
                     // Highlight current node
                     nodes[i].classList.add('traversing');
                     if (i < arrows.length) {
                         arrows[i].classList.add('traversing');
                     }
-                    
+
                     metrics.traversalSteps++;
                     updateInfoPanel();
-                    
+
                     await sleep(speed);
-                    
+
                     nodes[i].classList.remove('traversing');
                     if (i < arrows.length) {
                         arrows[i].classList.remove('traversing');
                     }
-                    
+
                     if (i === middleIndex) {
                         // Insert at middle
                         linkedList.splice(middleIndex, 0, value);
                         nodeAddresses = new Map();
                         initializeNodeAddresses();
-                        
+
                         showToast(`Inserted ${value} at position ${middleIndex}`, 'success');
                         updateLinkedListVisualization();
                         updateInfoPanel();
-                        
+
                         // Highlight new node
                         const newNodes = document.querySelectorAll('.linked-list-node');
                         newNodes[middleIndex].classList.add('inserting');
@@ -5264,7 +5544,7 @@ using namespace std;
                     }
                 }
             }
-            
+
             traversingPointer.style.display = 'none';
         }
 
@@ -5274,15 +5554,15 @@ using namespace std;
                 showToast('Linked list is empty!', 'error');
                 return;
             }
-            
+
             visualizationRunning = true;
-            
+
             const positionSelect = document.getElementById('deletePosition');
             const position = positionSelect.value;
-            
+
             metrics.operations++;
             updateInfoPanel();
-            
+
             if (position === '0') {
                 await deleteFromBeginning();
             } else if (position === 'end') {
@@ -5290,7 +5570,7 @@ using namespace std;
             } else if (position === 'middle') {
                 await deleteFromMiddle();
             }
-            
+
             visualizationRunning = false;
         }
 
@@ -5299,25 +5579,25 @@ using namespace std;
             traversingPointer.style.display = 'block';
             traversingPointer.style.left = '30px';
             traversingPointer.style.top = '-30px';
-            
+
             await sleep(speed);
-            
+
             // Highlight node to be deleted
             const firstNode = document.querySelector('.linked-list-node');
             if (firstNode) {
                 firstNode.classList.add('deleting');
                 await sleep(1000);
-                
+
                 // Remove from linked list
                 const deletedValue = linkedList.shift();
                 nodeAddresses = new Map();
                 initializeNodeAddresses();
-                
+
                 showToast(`Deleted ${deletedValue} from beginning`, 'warning');
                 updateLinkedListVisualization();
                 updateInfoPanel();
             }
-            
+
             traversingPointer.style.display = 'none';
         }
 
@@ -5326,58 +5606,58 @@ using namespace std;
                 await deleteFromBeginning();
                 return;
             }
-            
+
             const traversingPointer = document.getElementById('traversingPointer');
             traversingPointer.style.display = 'block';
-            
+
             // Start from head
             traversingPointer.style.left = '30px';
             traversingPointer.style.top = '-30px';
-            
+
             const nodes = document.querySelectorAll('.linked-list-node');
             const arrows = document.querySelectorAll('.linked-list-arrow');
-            
+
             // Traverse to the second last node
             for (let i = 0; i < nodes.length - 1; i++) {
                 if (!visualizationRunning) break;
-                
+
                 // Move traversing pointer
                 const nodeRect = nodes[i].getBoundingClientRect();
                 traversingPointer.style.left = (nodeRect.left + nodeRect.width / 2 - 30) + 'px';
-                
+
                 // Highlight current node
                 nodes[i].classList.add('traversing');
                 if (i < arrows.length) {
                     arrows[i].classList.add('traversing');
                 }
-                
+
                 metrics.traversalSteps++;
                 updateInfoPanel();
-                
+
                 await sleep(speed);
-                
+
                 nodes[i].classList.remove('traversing');
                 if (i < arrows.length) {
                     arrows[i].classList.remove('traversing');
                 }
-                
+
                 if (i === nodes.length - 2) {
                     // Highlight last node for deletion
                     const lastNode = nodes[nodes.length - 1];
                     lastNode.classList.add('deleting');
                     await sleep(1000);
-                    
+
                     // Remove from linked list
                     const deletedValue = linkedList.pop();
                     nodeAddresses = new Map();
                     initializeNodeAddresses();
-                    
+
                     showToast(`Deleted ${deletedValue} from end`, 'warning');
                     updateLinkedListVisualization();
                     updateInfoPanel();
                 }
             }
-            
+
             traversingPointer.style.display = 'none';
         }
 
@@ -5386,60 +5666,60 @@ using namespace std;
                 await deleteFromEnd();
                 return;
             }
-            
+
             const middleIndex = Math.floor(linkedList.length / 2);
             const traversingPointer = document.getElementById('traversingPointer');
             traversingPointer.style.display = 'block';
-            
+
             // Start from head
             traversingPointer.style.left = '30px';
             traversingPointer.style.top = '-30px';
-            
+
             const nodes = document.querySelectorAll('.linked-list-node');
             const arrows = document.querySelectorAll('.linked-list-arrow');
-            
+
             // Traverse to middle node
             for (let i = 0; i <= middleIndex; i++) {
                 if (!visualizationRunning) break;
-                
+
                 // Move traversing pointer
                 if (nodes[i]) {
                     const nodeRect = nodes[i].getBoundingClientRect();
                     traversingPointer.style.left = (nodeRect.left + nodeRect.width / 2 - 30) + 'px';
-                    
+
                     // Highlight current node
                     nodes[i].classList.add('traversing');
                     if (i < arrows.length) {
                         arrows[i].classList.add('traversing');
                     }
-                    
+
                     metrics.traversalSteps++;
                     updateInfoPanel();
-                    
+
                     await sleep(speed);
-                    
+
                     nodes[i].classList.remove('traversing');
                     if (i < arrows.length) {
                         arrows[i].classList.remove('traversing');
                     }
-                    
+
                     if (i === middleIndex) {
                         // Highlight middle node for deletion
                         nodes[middleIndex].classList.add('deleting');
                         await sleep(1000);
-                        
+
                         // Remove from linked list
                         const deletedValue = linkedList.splice(middleIndex, 1)[0];
                         nodeAddresses = new Map();
                         initializeNodeAddresses();
-                        
+
                         showToast(`Deleted ${deletedValue} from position ${middleIndex}`, 'warning');
                         updateLinkedListVisualization();
                         updateInfoPanel();
                     }
                 }
             }
-            
+
             traversingPointer.style.display = 'none';
         }
 
@@ -5449,44 +5729,44 @@ using namespace std;
                 showToast('Linked list is empty!', 'error');
                 return;
             }
-            
+
             visualizationRunning = true;
-            
+
             const traversingPointer = document.getElementById('traversingPointer');
             traversingPointer.style.display = 'block';
-            
+
             // Start from head
             traversingPointer.style.left = '30px';
             traversingPointer.style.top = '-30px';
-            
+
             const nodes = document.querySelectorAll('.linked-list-node');
             const arrows = document.querySelectorAll('.linked-list-arrow');
-            
+
             // Traverse through all nodes
             for (let i = 0; i < nodes.length; i++) {
                 if (!visualizationRunning) break;
-                
+
                 // Move traversing pointer
                 const nodeRect = nodes[i].getBoundingClientRect();
                 traversingPointer.style.left = (nodeRect.left + nodeRect.width / 2 - 30) + 'px';
-                
+
                 // Highlight current node and arrow
                 nodes[i].classList.add('traversing');
                 if (i < arrows.length) {
                     arrows[i].classList.add('traversing');
                 }
-                
+
                 metrics.traversalSteps++;
                 updateInfoPanel();
-                
+
                 await sleep(speed);
-                
+
                 nodes[i].classList.remove('traversing');
                 if (i < arrows.length) {
                     arrows[i].classList.remove('traversing');
                 }
             }
-            
+
             traversingPointer.style.display = 'none';
             visualizationRunning = false;
             showToast(`Traversal completed. Visited ${nodes.length} nodes.`, 'success');
@@ -5498,56 +5778,56 @@ using namespace std;
             const startTime = Date.now();
             const arr = [...currentArray];
             const elements = document.querySelectorAll('.array-element');
-            
+
             for (let i = 0; i < arr.length - 1; i++) {
                 for (let j = 0; j < arr.length - i - 1; j++) {
                     if (!visualizationRunning) return;
-                    
+
                     // Highlight comparing elements
                     elements[j].classList.add('comparing');
                     elements[j + 1].classList.add('comparing');
                     metrics.comparisons++;
                     updateInfoPanel();
-                    
+
                     await sleep(speed);
-                    
+
                     if (arr[j] > arr[j + 1]) {
                         // Swap
                         [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
                         metrics.swaps++;
-                        
+
                         // Update visualization
                         elements[j].classList.remove('comparing');
                         elements[j + 1].classList.remove('comparing');
                         elements[j].classList.add('swapping');
                         elements[j + 1].classList.add('swapping');
-                        
+
                         // Update heights
                         const maxValue = Math.max(...arr);
                         elements[j].style.height = `${(arr[j] / maxValue) * 250}px`;
                         elements[j + 1].style.height = `${(arr[j + 1] / maxValue) * 250}px`;
                         elements[j].querySelector('.element-value').textContent = arr[j];
                         elements[j + 1].querySelector('.element-value').textContent = arr[j + 1];
-                        
+
                         await sleep(speed);
-                        
+
                         elements[j].classList.remove('swapping');
                         elements[j + 1].classList.remove('swapping');
                     } else {
                         elements[j].classList.remove('comparing');
                         elements[j + 1].classList.remove('comparing');
                     }
-                    
+
                     updateInfoPanel();
                 }
-                
+
                 // Mark sorted element
                 elements[arr.length - i - 1].classList.add('sorted');
             }
-            
+
             // Mark all as sorted
             elements[0].classList.add('sorted');
-            
+
             metrics.time = Date.now() - startTime;
             currentArray = arr;
             visualizationRunning = false;
@@ -5561,57 +5841,57 @@ using namespace std;
             const arr = [...currentArray];
             const elements = document.querySelectorAll('.array-element');
             const maxValue = Math.max(...arr);
-            
+
             for (let i = 1; i < arr.length; i++) {
                 if (!visualizationRunning) return;
-                
+
                 let key = arr[i];
                 let j = i - 1;
-                
+
                 // Highlight current element being inserted
                 elements[i].classList.add('current');
                 metrics.comparisons++;
                 updateInfoPanel();
-                
+
                 await sleep(speed);
-                
+
                 while (j >= 0 && arr[j] > key) {
                     if (!visualizationRunning) return;
-                    
+
                     // Highlight comparison
                     elements[j].classList.add('comparing');
                     metrics.comparisons++;
                     updateInfoPanel();
-                    
+
                     await sleep(speed);
-                    
+
                     // Shift element
                     arr[j + 1] = arr[j];
                     elements[j + 1].style.height = `${(arr[j + 1] / maxValue) * 250}px`;
                     elements[j + 1].querySelector('.element-value').textContent = arr[j + 1];
                     elements[j + 1].classList.add('swapping');
-                    
+
                     await sleep(speed);
-                    
+
                     elements[j].classList.remove('comparing');
                     elements[j + 1].classList.remove('swapping');
-                    
+
                     j--;
                 }
-                
+
                 arr[j + 1] = key;
                 elements[j + 1].style.height = `${(key / maxValue) * 250}px`;
                 elements[j + 1].querySelector('.element-value').textContent = key;
                 elements[i].classList.remove('current');
-                
+
                 // Mark as partially sorted
                 for (let k = 0; k <= i; k++) {
                     elements[k].classList.add('sorted');
                 }
-                
+
                 updateInfoPanel();
             }
-            
+
             metrics.time = Date.now() - startTime;
             currentArray = arr;
             visualizationRunning = false;
@@ -5625,23 +5905,23 @@ using namespace std;
             const arr = [...currentArray];
             const elements = document.querySelectorAll('.array-element');
             const maxValue = Math.max(...arr);
-            
+
             for (let i = 0; i < arr.length - 1; i++) {
                 if (!visualizationRunning) return;
-                
+
                 let minIdx = i;
                 elements[i].classList.add('current');
-                
+
                 for (let j = i + 1; j < arr.length; j++) {
                     if (!visualizationRunning) return;
-                    
+
                     // Highlight comparison
                     elements[j].classList.add('comparing');
                     metrics.comparisons++;
                     updateInfoPanel();
-                    
+
                     await sleep(speed / 2);
-                    
+
                     if (arr[j] < arr[minIdx]) {
                         if (minIdx !== i) {
                             elements[minIdx].classList.remove('highlight');
@@ -5649,42 +5929,42 @@ using namespace std;
                         minIdx = j;
                         elements[minIdx].classList.add('highlight');
                     }
-                    
+
                     elements[j].classList.remove('comparing');
                     await sleep(speed / 2);
                 }
-                
+
                 if (minIdx !== i) {
                     // Swap
                     [arr[i], arr[minIdx]] = [arr[minIdx], arr[i]];
                     metrics.swaps++;
-                    
+
                     // Update visualization
                     elements[i].classList.add('swapping');
                     elements[minIdx].classList.add('swapping');
-                    
+
                     elements[i].style.height = `${(arr[i] / maxValue) * 250}px`;
                     elements[minIdx].style.height = `${(arr[minIdx] / maxValue) * 250}px`;
                     elements[i].querySelector('.element-value').textContent = arr[i];
                     elements[minIdx].querySelector('.element-value').textContent = arr[minIdx];
-                    
+
                     await sleep(speed);
-                    
+
                     elements[i].classList.remove('swapping');
                     elements[minIdx].classList.remove('swapping');
                 }
-                
+
                 elements[i].classList.remove('current');
                 if (minIdx !== i) {
                     elements[minIdx].classList.remove('highlight');
                 }
                 elements[i].classList.add('sorted');
-                
+
                 updateInfoPanel();
             }
-            
+
             elements[arr.length - 1].classList.add('sorted');
-            
+
             metrics.time = Date.now() - startTime;
             currentArray = arr;
             visualizationRunning = false;
@@ -5697,25 +5977,25 @@ using namespace std;
             const startTime = Date.now();
             const target = parseInt(document.getElementById('targetValue').value) || 45;
             const elements = document.querySelectorAll('.array-element');
-            
+
             metrics.comparisons = 0;
             metrics.foundIndex = -1;
             updateInfoPanel();
-            
+
             // Reset all elements
             elements.forEach(el => {
                 el.classList.remove('comparing', 'found', 'current');
             });
-            
+
             for (let i = 0; i < currentArray.length; i++) {
                 if (!visualizationRunning) break;
-                
+
                 elements[i].classList.add('current');
                 metrics.comparisons++;
                 updateInfoPanel();
-                
+
                 await sleep(speed);
-                
+
                 if (currentArray[i] === target) {
                     elements[i].classList.remove('current');
                     elements[i].classList.add('found');
@@ -5726,11 +6006,11 @@ using namespace std;
                     showToast(`Found ${target} at index ${i}!`, 'success');
                     return;
                 }
-                
+
                 elements[i].classList.remove('current');
                 await sleep(speed / 2);
             }
-            
+
             metrics.time = Date.now() - startTime;
             visualizationRunning = false;
             updateInfoPanel();
@@ -5740,11 +6020,11 @@ using namespace std;
         async function visualizeBinarySearch() {
             if (visualizationRunning) return;
             visualizationRunning = true;
-            
+
             const startTime = Date.now();
             const target = parseInt(document.getElementById('targetValue').value) || 55;
             let arr = [...currentArray];
-            
+
             // Ensure array is sorted for binary search
             arr.sort((a, b) => a - b);
             if (JSON.stringify(arr) !== JSON.stringify(currentArray)) {
@@ -5752,21 +6032,21 @@ using namespace std;
                 updateArrayVisualization();
                 await sleep(500);
             }
-            
+
             const elements = document.querySelectorAll('.array-element');
-            
+
             metrics.comparisons = 0;
             metrics.foundIndex = -1;
             updateInfoPanel();
-            
+
             // Reset all elements
             elements.forEach(el => {
                 el.classList.remove('comparing', 'found', 'current', 'search-area', 'left-pointer', 'right-pointer', 'mid-pointer');
             });
-            
+
             let left = 0;
             let right = currentArray.length - 1;
-            
+
             // Create search pointers
             const arrayContainer = document.getElementById('arrayContainer');
             const leftPointer = document.createElement('div');
@@ -5775,44 +6055,44 @@ using namespace std;
             leftPointer.style.left = '50px';
             leftPointer.style.bottom = '-50px';
             arrayContainer.appendChild(leftPointer);
-            
+
             const rightPointer = document.createElement('div');
             rightPointer.className = 'search-pointer right';
             rightPointer.textContent = 'R';
             rightPointer.style.right = '50px';
             rightPointer.style.bottom = '-50px';
             arrayContainer.appendChild(rightPointer);
-            
+
             while (left <= right) {
                 if (!visualizationRunning) break;
-                
+
                 const mid = Math.floor((left + right) / 2);
-                
+
                 // Update pointer positions
                 updatePointerPosition(leftPointer, left);
                 updatePointerPosition(rightPointer, right);
-                
+
                 // Highlight search area
                 for (let i = left; i <= right; i++) {
                     elements[i].classList.add('search-area');
                 }
-                
+
                 // Highlight middle element
                 elements[mid].classList.add('mid-pointer');
                 metrics.comparisons++;
                 updateInfoPanel();
-                
+
                 await sleep(speed);
-                
+
                 if (currentArray[mid] === target) {
                     // Found the target
                     elements[mid].classList.remove('mid-pointer', 'search-area');
                     elements[mid].classList.add('found');
-                    
+
                     // Remove pointers
                     leftPointer.remove();
                     rightPointer.remove();
-                    
+
                     metrics.foundIndex = mid;
                     metrics.time = Date.now() - startTime;
                     updateInfoPanel();
@@ -5822,7 +6102,7 @@ using namespace std;
                 } else if (currentArray[mid] < target) {
                     // Search right half
                     left = mid + 1;
-                    
+
                     // Add mid pointer animation
                     const midPointer = document.createElement('div');
                     midPointer.className = 'search-pointer mid';
@@ -5830,13 +6110,13 @@ using namespace std;
                     updatePointerPosition(midPointer, mid);
                     midPointer.style.bottom = '-80px';
                     arrayContainer.appendChild(midPointer);
-                    
+
                     await sleep(speed / 2);
                     midPointer.remove();
                 } else {
                     // Search left half
                     right = mid - 1;
-                    
+
                     // Add mid pointer animation
                     const midPointer = document.createElement('div');
                     midPointer.className = 'search-pointer mid';
@@ -5844,24 +6124,24 @@ using namespace std;
                     updatePointerPosition(midPointer, mid);
                     midPointer.style.bottom = '-80px';
                     arrayContainer.appendChild(midPointer);
-                    
+
                     await sleep(speed / 2);
                     midPointer.remove();
                 }
-                
+
                 // Remove highlights
                 elements[mid].classList.remove('mid-pointer');
                 for (let i = 0; i < currentArray.length; i++) {
                     elements[i].classList.remove('search-area');
                 }
-                
+
                 await sleep(speed / 2);
             }
-            
+
             // Remove pointers
             leftPointer.remove();
             rightPointer.remove();
-            
+
             metrics.time = Date.now() - startTime;
             visualizationRunning = false;
             updateInfoPanel();
@@ -5958,7 +6238,7 @@ using namespace std;
         function customElement() {
             const value = prompt('Enter a number between 1 and 100:');
             const numValue = parseInt(value);
-            
+
             if (!isNaN(numValue) && numValue >= 1 && numValue <= 100) {
                 if (currentArray.length < 20) {
                     currentArray.push(numValue);
@@ -5998,11 +6278,11 @@ using namespace std;
                 showToast('Visualization already running', 'warning');
                 return;
             }
-            
+
             resetMetrics();
             updateInfoPanel();
-            
-            switch(currentAlgorithm) {
+
+            switch (currentAlgorithm) {
                 case 'bubble':
                     visualizeBubbleSort();
                     break;
@@ -6022,7 +6302,7 @@ using namespace std;
                 showToast('Search already running', 'warning');
                 return;
             }
-            
+
             if (currentAlgorithm === 'binary') {
                 visualizeBinarySearch();
             } else if (currentAlgorithm === 'linear') {
@@ -6036,19 +6316,19 @@ using namespace std;
         function copyCode(elementId) {
             const codeElement = document.getElementById(elementId);
             const text = codeElement.textContent;
-            
+
             navigator.clipboard.writeText(text)
                 .then(() => {
                     const btn = event.target.closest('.code-btn');
                     const originalText = btn.innerHTML;
                     btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
                     btn.style.background = 'var(--success)';
-                    
+
                     setTimeout(() => {
                         btn.innerHTML = originalText;
                         btn.style.background = '';
                     }, 2000);
-                    
+
                     showToast('Code copied to clipboard!', 'success');
                 })
                 .catch(err => {
@@ -6106,14 +6386,14 @@ using namespace std;
             const toastContainer = document.getElementById('toastContainer');
             const toast = document.createElement('div');
             toast.className = `toast ${type}`;
-            
+
             const icons = {
                 success: 'fa-check-circle',
                 error: 'fa-exclamation-circle',
                 warning: 'fa-exclamation-triangle',
                 info: 'fa-info-circle'
             };
-            
+
             toast.innerHTML = `
                 <div class="toast-icon">
                     <i class="fas ${icons[type]}"></i>
@@ -6126,9 +6406,9 @@ using namespace std;
                     <i class="fas fa-times"></i>
                 </button>
             `;
-            
+
             toastContainer.appendChild(toast);
-            
+
             // Auto remove after 5 seconds
             setTimeout(() => {
                 if (toast.parentElement) {
@@ -6142,10 +6422,10 @@ using namespace std;
         // Syntax Highlighting
         function applySyntaxHighlighting() {
             const codeElements = document.querySelectorAll('.code-content');
-            
+
             codeElements.forEach(element => {
                 let code = element.textContent;
-                
+
                 // C++ specific highlighting
                 const patterns = [
                     { regex: /\b(include|define|ifdef|endif|ifndef)\b/g, className: 'code-macro' },
@@ -6157,14 +6437,15 @@ using namespace std;
                     { regex: /\b(\d+)\b/g, className: 'code-number' },
                     { regex: /(\.|->|::)/g, className: 'code-operator' }
                 ];
-                
+
                 patterns.forEach(pattern => {
                     code = code.replace(pattern.regex, `<span class="${pattern.className}">$&</span>`);
                 });
-                
+
                 element.innerHTML = code;
             });
         }
     </script>
 </body>
+
 </html>
